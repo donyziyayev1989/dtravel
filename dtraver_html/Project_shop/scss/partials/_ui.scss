@@ -1,0 +1,345 @@
+// Ui
+.img-fluid{
+	max-width: 100%;
+	height: auto;
+}
+.form-control{
+	width: 100%;
+	display: block;
+	height: $form-control-lg;
+	border-radius: 5px;
+	border: none;
+	padding: 10px;
+	&--lg{
+		font-size: 35px;
+		padding-top: 15px;
+		padding-bottom: 15px;
+		height: auto;
+	}
+}
+.form-group{
+	
+	& + &{
+		margin-top: 10px;
+	}
+}
+.form-legend{
+	margin-bottom: 20px;
+}
+.btn-groups{
+	.btn + .btn{
+		margin-left: 10px;
+	}
+	&.d-flex{
+		.btn{
+			flex: 1 1 auto!important;
+		}
+	}
+}
+.control-label{
+	margin-bottom: 10px;
+	display: block;
+	
+}
+.btn{
+	display: inline-block;
+	border-radius: 5px;
+	padding: 11px 16px;
+	transition: all 300ms;
+	border: 1px solid  $light-grey2;
+	text-align: center;
+	background: transparent;
+	&.disabled{
+		&, &:hover, &:focus, &:active{
+			color:$light-grey2;
+			border-color: $light-grey2;
+			background: $white;
+			box-shadow: none;
+			cursor: default;
+		}
+	}
+}
+.btn-default{
+	border: 1px solid  $default-icon-bd;
+}
+.btn-dark{
+	color:$white;
+	background: $black3;
+	border: none;
+	&:hover, &:focus{
+		background: $black
+	}
+}
+.btn-transparent{
+	border: 1px solid  $default-icon-bd;
+	background: transparent;
+	color:$white;
+	&:hover, &:focus{
+		background: $black;
+		border-color: $black
+	}
+}
+.btn-info{
+	color:$info;
+	&:hover,&:focus{
+		border-color: $info;
+		background: $info;
+		color:$white;
+	}
+	&:active{
+		box-shadow: 0 0 5px $info;
+	}
+	
+}
+.btn-info-bg{
+	background: $info;
+	color:$white;
+	border-color: $info;
+	&:hover, &:focus{
+		background: darken($info, 10%);
+		border-color: darken($info, 10%);
+	}
+}
+.btn-success-bg{
+	background: $success;
+	color:$white;
+	border-color: $success;
+	&:hover, &:focus{
+		background: darken($success, 10%);
+		border-color: darken($success, 10%);
+	}
+	&.disabled{
+		border-color: $light-grey2;
+		background: $light-grey2;
+		box-shadow: none;
+		cursor: default;
+		color:$grey2;
+	}
+}
+.btn-danger-bg{
+	background: $danger;
+	color:$white;
+	border-color: $danger;
+	&:hover, &:focus{
+		background: darken($danger, 10%);
+		border-color: darken($danger, 10%);
+	}
+	&.disabled{
+		border-color: $light-grey2;
+		background: $light-grey2;
+		box-shadow: none;
+		cursor: default;
+		color:$grey2;
+	}
+}
+.btn-warning-bg{
+	background: $warning;
+	color:$white;
+	border-color: $warning;
+	&:hover, &:focus{
+		background: darken($warning, 10%);
+		border-color: darken($warning, 10%);
+	}
+}
+.btn-lg{
+	padding: 15px 30px;
+	height: $left-sidebar-icon-dimensions-lg;
+	font-size: 2.5rem;
+	@include maxextralg{
+		height: $left-sidebar-icon-dimensions-md;
+		font-size: 2rem;
+		padding: 14px 20px;
+	}
+	@include maxlg {
+		height: $left-sidebar-icon-dimensions-sm;
+		font-size: 1.5rem;
+		padding: 10px 20px;
+	}
+}
+.btn-block{
+	border-radius: 5px;
+}
+.has-addon{
+	position: relative;
+	.form-control{
+		padding-right: 4rem;
+	}
+	.form-group__addon{
+		position: absolute;
+		right: 0;
+		top: 0;
+		height: 100%;
+		.btn{
+			height: 100%;
+			border: none;
+			// background: none;
+			width: 4rem;
+		}
+	}	
+}
+.bd-radius{
+	&--left-bottom{
+		border-bottom-left-radius: 5px;
+	}
+	&--right-bottom{
+		border-bottom-right-radius: 5px;
+	}
+	&--left-top{
+		border-top-left-radius: 5px;
+	}
+	&--right-top{
+		border-top-right-radius: 5px;
+	}
+}
+
+.text-right{
+	text-align: right !important;
+}
+.text-left{
+	text-align: left !important
+}
+.text-center{
+	text-align: center !important;
+}
+
+.table{
+	width: 100%;
+}
+
+.label{
+	font-weight: 400;
+	font-size: 1.2rem;
+	padding: 8px 20px;
+	display: inline-block;
+	border-radius: 5px;
+	&-default{
+		background: $label-default;
+		color:$grey2;
+	}
+	& + &{
+		margin-left: 30px;
+	}
+	&-info{
+		color:$info;
+		background: $label-default;
+	}
+}
+.radio{
+	display: inline-block;
+	input[type="radio"]{
+		display: none;
+	}
+	label{
+		display: inline-block;
+		color:#BABABA;
+		padding: 9px 15px;
+		background: #2D2D33;
+		border-radius: 5px;
+		font-size: 1.8rem;
+		cursor: pointer;
+		transition: all 300ms;
+		text-align: center;
+		
+		i{
+			width: 1rem;
+		}
+	}
+	input[type="radio"]:checked + label{
+		background: $info;
+		color:$white;
+	}
+	& + &{
+		margin-left: 10px;
+	}
+}
+// Whitespaces
+.mt-5{
+  margin-top: 5px;
+}
+.mt-10{
+  margin-top: 10px;
+}
+.mt-15{
+  margin-top: 15px;
+}
+.mt-20{
+  margin-top: 20px !important;
+}
+.mt-30{
+  margin-top: 30px !important;
+}
+.mb-5{
+	margin-bottom: 5px;
+}
+.mb-10{
+  margin-bottom: 10px;
+}
+.mb-15{
+	margin-bottom: 15px;
+}
+.mb-20{
+  margin-bottom: 20px !important;
+}
+.mb-15{
+  margin-bottom: 15px;
+}
+.mb-25{
+  margin-bottom: 25px;
+}
+.mb-30{
+  margin-bottom: 30px;
+}
+.mb-40{
+  margin-bottom: 40px;
+}
+.mb-45{
+  margin-bottom: 45px;
+}
+.mb-50{
+  margin-bottom: 50px !important;
+}
+.mb-60{
+  margin-bottom: 60px;
+}
+.mb-80{
+  margin-bottom: 80px;
+}
+.mt-40{
+  margin-top: 40px;
+}
+.mt-50{
+  margin-top: 50px;
+}
+.pr-0{
+  padding-right: 0;
+}
+.mr-10{
+  margin-right: 10px;
+}
+.mr-20{
+	margin-right: 20px;
+}
+.mb-100{
+  margin-bottom: 100px;
+}
+.pl-40{
+  padding-left: 40px !important;
+}
+.p-40{
+	padding: 40px;
+}
+.m-auto{
+	margin: auto;
+}
+.p-10{
+	padding: 10px;
+}
+.pl-10{
+	padding-left: 10px;
+}
+.pr-10{
+	padding-right: 10px;
+}
+.pt-0{
+	padding-top: 0;
+}

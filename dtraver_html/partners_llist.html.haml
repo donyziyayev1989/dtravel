@@ -1,0 +1,1427 @@
+!!!
+%html{:lang => "en"}
+  / begin::Head
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:charset => "utf-8"}/
+    %title Tabs
+    %meta{:content => "Login page example", :name => "description"}/
+    %meta{:content => "width=device-width, initial-scale=1, shrink-to-fit=no", :name => "viewport"}/
+    / begin::Fonts
+    %link{:href => "https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700", :rel => "stylesheet"}/
+    / end::Fonts
+    / Bootstrap css
+    %link{:href => "css/bootstrap.min.css", :rel => "stylesheet"}/
+    / FontAwesome
+    %link{:href => "css/fontAwesome.css", :rel => "stylesheet"}/
+    / Select2
+    %link{:href => "css/select2.css", :rel => "stylesheet"}/
+    / Custom styles
+    %link{:href => "css/style.css", :rel => "stylesheet"}/
+    %link{:href => "images/favicon.ico", :rel => "shortcut icon"}/
+  / end::Head
+  %body.body--full-height
+    / Beginning .header
+    %header.header.header--fixed
+      .backdrop
+      .header__inner.container-fluid
+        %button.navbar-toggler{"aria-controls" => "main-nav", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#main-nav", :type => "button"}
+          %span.fas.fa-bars
+        %nav#main-nav.header__navbar
+          .navbar__inner.slim-scrollbar
+            %button.header__navbar__close
+              %i.fas.fa-times
+            %ul.navbar-nav
+              %li.nav-item.active
+                %a.nav-link{:href => "#"} Dashboard
+              %li.nav-item.dropdown
+                %a#dropdown04.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#"}
+                  Hover
+                  %i.angle.fas.fa-chevron-down
+                .dropdown-menu{"aria-labelledby" => "dropdown04"}
+                  %a.dropdown-item{:href => "#"}
+                    %i.far.fa-paper-plane
+                    Action
+                    %span.badge.badge-danger 2
+                  %a.dropdown-item{:href => "#"}
+                    %i.far.fa-paper-plane
+                    Another action
+                  %a.dropdown-item{:href => "#"}
+                    %i.far.fa-paper-plane
+                    Something else here
+                  %a.dropdown-item{:href => "#"}
+                    %i.far.fa-paper-plane
+                    Action
+                    %span.badge.badge-danger 25
+                  %a.dropdown-item{:href => "#"}
+                    %i.far.fa-paper-plane
+                    Another action
+                  %a.dropdown-item{:href => "#"}
+                    %i.far.fa-paper-plane
+                    Something else here
+              %li.nav-item
+                %a.nav-link{:href => "#"} Products
+              %li.nav-item
+                %a.nav-link{:href => "#"} Reports
+              %li.nav-item.dropdown.mega-dropdown
+                %a#dropdown04.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "http:#"}
+                  Hover
+                  %i.angle.fas.fa-chevron-down
+                .dropdown-menu.mega-dropdown-menu{"aria-labelledby" => "dropdown04"}
+                  .container
+                    .row
+                      .col
+                        %h4.dropdown-header Actions
+                        %a.dropdown-item{:href => "#"}
+                          %i.far.fa-paper-plane
+                          Action
+                        %a.dropdown-item{:href => "#"}
+                          %i.far.fa-paper-plane
+                          Another action
+                        %a.dropdown-item{:href => "#"}
+                          %i.far.fa-paper-plane
+                          Something else here
+                      .col
+                        %h4.dropdown-header Actions
+                        %ul.list.list-dashed
+                          %li
+                            %a.dropdown-item{:href => "#"} Action
+                          %li
+                            %a.dropdown-item{:href => "#"} Another action
+                          %li
+                            %a.dropdown-item{:href => "#"} Something else here
+                      .col
+                        %h4.dropdown-header Actions
+                        %ul.list.list-dot
+                          %li
+                            %a.dropdown-item{:href => "#"} Action
+                          %li
+                            %a.dropdown-item{:href => "#"} Another action
+                          %li
+                            %a.dropdown-item{:href => "#"} Something else here
+              %li.nav-item.dropdown
+                %a#dropdown04.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "http:#"}
+                  Roles
+                  %i.angle.fas.fa-chevron-down
+                .dropdown-menu{"aria-labelledby" => "dropdown04"}
+                  %a.dropdown-item{:href => "#"}
+                    %i.far.fa-paper-plane
+                    Action
+                    %span.badge.badge-danger 2
+                  %a.dropdown-item{:href => "#"}
+                    %i.far.fa-paper-plane
+                    Another action
+                  %a.dropdown-item{:href => "#"}
+                    %i.far.fa-paper-plane
+                    Something else here
+                  %a.dropdown-item{:href => "#"}
+                    %i.far.fa-paper-plane
+                    Action
+                    %span.badge.badge-danger 25
+                  %a.dropdown-item{:href => "#"}
+                    %i.far.fa-paper-plane
+                    Another action
+                  %a.dropdown-item{:href => "#"}
+                    %i.far.fa-paper-plane
+                    Something else here
+        %nav.header__toolbar
+          %ul.navbar-nav.mr-auto
+            %li.nav-item.header__topbar-item.dropdown
+              .header__topbar-wrapper{"aria-expanded" => "false", "data-offset" => "10px,0px", "data-toggle" => "dropdown"}
+                %span.header__topbar-icon
+                  %i.far.fa-bell
+                %span.badge.badge--danger 2
+              .dropdown-menu.dropdown-menu-right.dropdown-menu-anim.dropdown-menu-xl
+                %form
+                  / begin: Head
+                  .dropdown-head.dropdown-head--dark
+                    %h3.dropdown-head__title
+                      9 New
+                      %span User Notifications
+                  / end: Head
+                  %ul.nav.nav-tabs.nav-tabs-line.nav-tabs-line-success{:role => "tablist"}
+                    %li.nav-item
+                      %a.nav-link.show.active{"aria-selected" => "true", "data-toggle" => "tab", :href => "#topbar_notifications_notifications", :role => "tab"} Alerts
+                    %li.nav-item
+                      %a.nav-link{"aria-selected" => "false", "data-toggle" => "tab", :href => "#topbar_notifications_events", :role => "tab"} Events
+                    %li.nav-item
+                      %a.nav-link{"aria-selected" => "false", "data-toggle" => "tab", :href => "#topbar_notifications_logs", :role => "tab"} Logs
+                  .tab-content
+                    #topbar_notifications_notifications.tab-pane.show.active{:role => "tabpanel"}
+                      .notification.slim-scrollbar
+                        %a.notification__item{:href => "#"}
+                          .notification__item-icon
+                            %i.fas.fa-bullhorn.icon--info
+                          .notification__item-details
+                            .notification__item-title
+                              New order has been placed
+                            .notification__item-content
+                              Lorem ipsum dolor sit amet.
+                        %a.notification__item.notification__item--read{:href => "#"}
+                          .notification__item-icon
+                            %i.fas.fa-bullhorn.icon--warning
+                          .notification__item-details
+                            .notification__item-title
+                              Company meeting canceled
+                            .notification__item-content
+                              Lorem ipsum dolor sit amet.
+                        %a.notification__item{:href => "#"}
+                          .notification__item-icon
+                            %i.fas.fa-bullhorn.icon--danger
+                          .notification__item-details
+                            .notification__item-title
+                              New report has been received
+                            .notification__item-time
+                              23 hrs ago
+                        %a.notification__item{:href => "#"}
+                          .notification__item-icon
+                            %i.fas.fa-bullhorn.icon--primary
+                          .notification__item-details
+                            .notification__item-title
+                              Finance report has been generated
+                            .notification__item-content
+                              Lorem ipsum dolor sit amet.
+                        %a.notification__item{:href => "#"}
+                          .notification__item-icon
+                            %i.fas.fa-bullhorn.icon--success
+                          .notification__item-details
+                            .notification__item-title
+                              New customer comment recieved
+                            .notification__item-content
+                              Lorem ipsum dolor sit amet.
+                        %a.notification__item{:href => "#"}
+                          .notification__item-icon
+                            %i.fas.fa-bullhorn.icon--info
+                          .notification__item-details
+                            .notification__item-title
+                              New order has been received
+                            .notification__item-content
+                              Lorem ipsum dolor sit amet.
+                        %a.notification__item{:href => "#"}
+                          .notification__item-icon
+                            %i.fas.fa-bullhorn.icon--info
+                          .notification__item-details
+                            .notification__item-title
+                              New customer is registered
+                            .notification__item-content
+                              Lorem ipsum dolor sit amet.
+                        %a.notification__item{:href => "#"}
+                          .notification__item-icon
+                            %i.fas.fa-bullhorn.icon--info
+                          .notification__item-details
+                            .notification__item-title
+                              Application has been approved
+                            .notification__item-content
+                              Lorem ipsum dolor sit amet.
+                        %a.notification__item{:href => "#"}
+                          .notification__item-icon
+                            %i.fas.fa-bullhorn.icon--info
+                          .notification__item-details
+                            .notification__item-title
+                              New file has been uploaded
+                            .notification__item-content
+                              Lorem ipsum dolor sit amet.
+                        %a.notification__item{:href => "#"}
+                          .notification__item-icon
+                            %i.fas.fa-bullhorn.icon--info
+                          .notification__item-details
+                            .notification__item-title
+                              New user feedback received
+                            .notification__item-content
+                              Lorem ipsum dolor sit amet.
+                        %a.notification__item{:href => "#"}
+                          .notification__item-icon
+                            %i.fas.fa-bullhorn.icon--info
+                          .notification__item-details
+                            .notification__item-title
+                              System reboot has been successfully completed
+                            .notification__item-content
+                              Lorem ipsum dolor sit amet.
+                        %a.notification__item{:href => "#"}
+                          .notification__item-icon
+                            %i.fas.fa-bullhorn.icon--info
+                          .notification__item-details
+                            .notification__item-title
+                              New customer is registered
+                            .notification__item-content
+                              Lorem ipsum dolor sit amet.
+                    #topbar_notifications_events.tab-pane{:role => "tabpanel"}
+                      .notification.slim-scrollbar
+                        %a.notification__item{:href => "#"}
+                          .notification__item-icon
+                            %i.fas.fa-angle-double-right.icon--info
+                          .notification__item-details
+                            .notification__item-title
+                              New order has been placed
+                            .notification__item-content
+                              Lorem ipsum dolor sit amet.
+                        %a.notification__item.notification__item--read{:href => "#"}
+                          .notification__item-icon
+                            %i.fas.fa-angle-double-right.icon--warning
+                          .notification__item-details
+                            .notification__item-title
+                              Company meeting canceled
+                            .notification__item-content
+                              Lorem ipsum dolor sit amet.
+                        %a.notification__item{:href => "#"}
+                          .notification__item-icon
+                            %i.fas.fa-angle-double-right.icon--danger
+                          .notification__item-details
+                            .notification__item-title
+                              New report has been received
+                            .notification__item-time
+                              23 hrs ago
+                        %a.notification__item{:href => "#"}
+                          .notification__item-icon
+                            %i.fas.fa-angle-double-right.icon--primary
+                          .notification__item-details
+                            .notification__item-title
+                              Finance report has been generated
+                            .notification__item-content
+                              Lorem ipsum dolor sit amet.
+                        %a.notification__item{:href => "#"}
+                          .notification__item-icon
+                            %i.fas.fa-angle-double-right.icon--success
+                          .notification__item-details
+                            .notification__item-title
+                              New customer comment recieved
+                            .notification__item-content
+                              Lorem ipsum dolor sit amet.
+                    #topbar_notifications_logs.tab-pane{:role => "tabpanel"}
+                      .grid.grid--ver{:style => "min-height: 200px;"}
+                        .grid.grid--hor.grid__item--fluid
+                          .grid__item
+                            All caught up!
+                            = succeed "No" do
+                              %br/
+            %li.nav-item.header__topbar-item.dropdown
+              .header__topbar-wrapper{"aria-expanded" => "false", "data-toggle" => "dropdown"}
+                Иван Иванов
+                %i.angle.fas.fa-chevron-down
+              %span.header__topbar-icon.icon-bg--info.ml-3
+                %i.far.fa-user
+              .dropdown-menu.dropdown-menu-right.dropdown-menu-anim.dropdown-menu-sm
+                / begin: Head
+                .dropdown-head.dropdown-head--dark
+                  %h3.dropdown-head__title
+                    .user Иван Иванов
+                    %span ivanov@travel.com
+                / end: Head
+                .user-links
+                  %a.dropdown-item{:href => "#"}
+                    %i.fas.fa-angle-double-right
+                    Account
+                  %a.dropdown-item{:href => "#"}
+                    %i.fas.fa-angle-double-right
+                    Manage order
+                  %a.dropdown-item{:href => "#"}
+                    %i.fas.fa-angle-double-right
+                    Log Out
+    / End .header
+    %main.main-content
+      .container-fluid
+        .portlet.portlet--full-height
+          .portlet__body
+            .row
+              .col.col-sm-12.col-xl-3.col-lg-4
+                .portlet.portlet--bordered.portlet--no-padding
+                  .portlet__head{:style => "min-height: 50px;"}
+                    .portlet__head-label
+                      %h3.portlet__head-title
+                        Partners
+                    .portlet__head-toolbar
+                      .portlet__head-wrapper
+                        .portlet__head-actions
+                          /
+                            <button class="btn btn-success btn-inverse btn-sm btn-action" type="button" data-toggle="tooltip" data-placement="top" title="List View"><i class="fas fa-list"></i></button>
+                            <button class="btn disabled btn-inverse btn-sm btn-action" type="button" data-toggle="tooltip" data-placement="top" title="Table View"><i class="fas fa-table"></i></button>
+                  .portlet__head
+                    %input.mt-10.mb-10.form-control{:placeholder => "Name, City, Phone, Business Model...", :type => "search"}/
+                  .portlet__body
+                    .scrollable
+                      %table.table.table--striped.table--padding-sm.table-heading-fixed
+                        %thead
+                          %tr
+                            %th  
+                            %th Company name
+                            %th City
+                        %tbody
+                          %tr
+                            %td
+                              %i.fas.fa-plus
+                            %td Классический тур
+                            %td 11/10/2018
+                          %tr
+                            %td
+                              %i.fas.fa-plus
+                            %td Классический тур
+                            %td 11/10/2018
+                          %tr
+                            %td
+                              %i.fas.fa-plus
+                            %td Классический тур
+                            %td 11/10/2018
+                          %tr
+                            %td
+                              %i.fas.fa-plus
+                            %td Классический тур
+                            %td 11/10/2018
+                          %tr
+                            %td
+                              %i.fas.fa-plus
+                            %td Классический тур
+                            %td 11/10/2018
+                          %tr
+                            %td
+                              %i.fas.fa-plus
+                            %td Классический тур
+                            %td 11/10/2018
+                          %tr
+                            %td
+                              %i.fas.fa-plus
+                            %td Классический тур
+                            %td 11/10/2018
+                          %tr
+                            %td
+                              %i.fas.fa-plus
+                            %td Классический тур
+                            %td 11/10/2018
+                          %tr
+                            %td
+                              %i.fas.fa-plus
+                            %td Классический тур
+                            %td 11/10/2018
+                          %tr
+                            %td
+                              %i.fas.fa-plus
+                            %td Классический тур
+                            %td 11/10/2018
+                          %tr
+                            %td
+                              %i.fas.fa-plus
+                            %td Классический тур
+                            %td 11/10/2018
+                          %tr
+                            %td
+                              %i.fas.fa-plus
+                            %td Классический тур
+                            %td 11/10/2018
+                          %tr
+                            %td
+                              %i.fas.fa-plus
+                            %td Классический тур
+                            %td 11/10/2018
+                          %tr
+                            %td
+                              %i.fas.fa-plus
+                            %td Классический тур
+                            %td 11/10/2018
+                          %tr
+                            %td
+                              %i.fas.fa-plus
+                            %td Классический тур
+                            %td 11/10/2018
+                          %tr
+                            %td
+                              %i.fas.fa-plus
+                            %td Классический тур
+                            %td 11/10/2018
+                          %tr
+                            %td
+                              %i.fas.fa-plus
+                            %td Классический тур
+                            %td 11/10/2018
+                          %tr
+                            %td
+                              %i.fas.fa-plus
+                            %td Классический тур
+                            %td 11/10/2018
+                          %tr
+                            %td
+                              %i.fas.fa-plus
+                            %td Классический тур
+                            %td 11/10/2018
+                          %tr
+                            %td
+                              %i.fas.fa-plus
+                            %td Классический тур
+                            %td 11/10/2018
+                          %tr
+                            %td
+                              %i.fas.fa-plus
+                            %td Классический тур
+                            %td 11/10/2018
+                          %tr
+                            %td
+                              %i.fas.fa-plus
+                            %td Классический тур
+                            %td 11/10/2018
+                          %tr
+                            %td
+                              %i.fas.fa-plus
+                            %td Классический тур
+                            %td 11/10/2018
+                          %tr
+                            %td
+                              %i.fas.fa-plus
+                            %td Классический тур
+                            %td 11/10/2018
+                          %tr
+                            %td
+                              %i.fas.fa-plus
+                            %td Классический тур
+                            %td 11/10/2018
+                          %tr
+                            %td
+                              %i.fas.fa-plus
+                            %td Классический тур
+                            %td 11/10/2018
+                          %tr
+                            %td
+                              %i.fas.fa-plus
+                            %td Классический тур
+                            %td 11/10/2018
+                          %tr
+                            %td
+                              %i.fas.fa-plus
+                            %td Классический тур
+                            %td 11/10/2018
+                          %tr
+                            %td
+                              %i.fas.fa-plus
+                            %td Классический тур
+                            %td 11/10/2018
+                          %tr
+                            %td
+                              %i.fas.fa-plus
+                            %td Классический тур
+                            %td 11/10/2018
+                          %tr
+                            %td
+                              %i.fas.fa-plus
+                            %td Классический тур
+                            %td 11/10/2018
+                          %tr
+                            %td
+                              %i.fas.fa-plus
+                            %td Классический тур
+                            %td 11/10/2018
+                          %tr
+                            %td
+                              %i.fas.fa-plus
+                            %td Классический тур
+                            %td 11/10/2018
+                          %tr
+                            %td
+                              %i.fas.fa-plus
+                            %td Классический тур
+                            %td 11/10/2018
+                          %tr
+                            %td
+                              %i.fas.fa-plus
+                            %td Классический тур
+                            %td 11/10/2018
+                          %tr
+                            %td
+                              %i.fas.fa-plus
+                            %td Классический тур
+                            %td 11/10/2018
+                          %tr
+                            %td
+                              %i.fas.fa-plus
+                            %td Классический тур
+                            %td 11/10/2018
+                          %tr
+                            %td
+                              %i.fas.fa-plus
+                            %td Классический тур
+                            %td 11/10/2018
+                          %tr
+                            %td
+                              %i.fas.fa-plus
+                            %td Классический тур
+                            %td 11/10/2018
+                          %tr
+                            %td
+                              %i.fas.fa-plus
+                            %td Классический тур
+                            %td 11/10/2018
+                          %tr
+                            %td
+                              %i.fas.fa-plus
+                            %td Классический тур
+                            %td 11/10/2018
+                          %tr
+                            %td
+                              %i.fas.fa-plus
+                            %td Классический тур
+                            %td 11/10/2018
+                          %tr
+                            %td
+                              %i.fas.fa-plus
+                            %td Классический тур
+                            %td 11/10/2018
+                          %tr
+                            %td
+                              %i.fas.fa-plus
+                            %td Классический тур
+                            %td 11/10/2018
+                          %tr
+                            %td
+                              %i.fas.fa-plus
+                            %td Классический тур
+                            %td 11/10/2018
+                          %tr
+                            %td
+                              %i.fas.fa-plus
+                            %td Классический тур
+                            %td 11/10/2018
+                          %tr
+                            %td
+                              %i.fas.fa-plus
+                            %td Классический тур
+                            %td 11/10/2018
+                          %tr
+                            %td
+                              %i.fas.fa-plus
+                            %td Классический тур
+                            %td 11/10/2018
+                          %tr
+                            %td
+                              %i.fas.fa-plus
+                            %td Классический тур
+                            %td 11/10/2018
+                          %tr
+                            %td
+                              %i.fas.fa-plus
+                            %td Классический тур
+                            %td 11/10/2018
+                          %tr
+                            %td
+                              %i.fas.fa-plus
+                            %td Классический тур
+                            %td 11/10/2018
+                          %tr
+                            %td
+                              %i.fas.fa-plus
+                            %td Классический тур
+                            %td 11/10/2018
+              / To make element full-height of screen add class portlet--full-height
+              .col.col-sm-12.col-xl-9.col-lg-8
+                .portlet.portlet--tabs
+                  .portlet__head{:style => "min-height: 50px;"}
+                    .portlet__head-label
+                      %h3.portlet__head-title
+                        Классический тур
+                    .portlet__head-toolbar
+                      .portlet__head-wrapper
+                        .portlet__head-actions
+                          %button.btn.btn-success.btn-inverse.btn-sm.btn-action{"data-placement" => "top", "data-toggle" => "tooltip", :title => "List View", :type => "button"}
+                            %i.fas.fa-list
+                          %button.btn.disabled.btn-inverse.btn-sm.btn-action{"data-placement" => "top", "data-toggle" => "tooltip", :title => "Table View", :type => "button"}
+                            %i.fas.fa-table
+                          %a.btn.btn-sm.btn-info{"data-toggle" => "modal", :href => "#modal_add"}
+                            %i.fas.fa-plus
+                          %a.btn.btn-sm.btn-purple{:href => "#"}
+                            %i.fas.fa-file-excel
+                          %a.btn.btn-sm.btn-danger{:href => "#"}
+                            %i.fas.fa-arrow-left
+                  / End .portlet__head
+                  .portlet__head
+                    .portlet__head-toolbar.portlet__head-toolbar--tabs
+                      #nav-tab.nav.nav-tabs{:role => "tablist"}
+                        %a.nav-item.nav-link.active{"data-toggle" => "tab", :href => "#tab1", :role => "tab"}
+                          %i.fas.fa-info
+                          Info
+                        %a.nav-item.nav-link{"data-toggle" => "tab", :href => "#tab2", :role => "tab"}
+                          %i.fas.fa-hands-helping
+                          Deals
+                        %a.nav-item.nav-link{"data-toggle" => "tab", :href => "#tab3", :role => "tab"}
+                          %i.fas.fa-history
+                          History
+                        %a.nav-item.nav-link{"data-toggle" => "tab", :href => "#tab4", :role => "tab"}
+                          %i.fas.fa-unlock
+                          Access
+                  / End .portlet__head
+                  .portlet__body
+                    #nav-tabContent.tab-content
+                      #tab1.tab-pane.fade.show.active{:role => "tabpanel"}
+                        .row
+                          .col-sm-12.col-md-6
+                            .portlet__head
+                              .portlet__head-label
+                                %h3.portlet__head-title Классический тур
+                              .portlet__head-toolbar
+                                %i.far.fa-edit.font-success
+                            .portlet__body
+                              .info-table
+                                .item
+                                  .item__left
+                                    Статус:
+                                  .item__right
+                                    .label.label--info
+                                      Потенциальный
+                                .item
+                                  .item__left
+                                    Юр.название:
+                                  .item__right
+                                    %strong “OOO” Lorem ipsum. Lorem ipsum.
+                                .item
+                                  .item__left
+                                    ИНН
+                                  .item__right
+                                    %strong 123123123123
+                                .item
+                                  .item__left
+                                    Юр.адрес
+                                  .item__right
+                                    %strong 123123123123
+                                .item
+                                  .item__left
+                                    Физ.адрес
+                                  .item__right
+                                    %strong 123123123123
+                                .item
+                                  .item__left
+                                    Телефон:
+                                  .item__right
+                                    %div
+                                      %strong +999(99) 999-99-99-99
+                                    %div
+                                      %strong +999(99) 999-99-99-99
+                                .item
+                                  .item__left
+                                    Договор:
+                                  .item__right
+                                    вебчасть профиля партнера, отображающая информацию о договоре с партнером.
+                                .item
+                                  .item__left
+                                    Юр.название:
+                                  .item__right
+                                    %strong.font-info “OOO” Lorem ipsum. Lorem ipsum.
+                                .item
+                                  .item__left
+                                    Юр.название:
+                                  .item__right
+                                    %span.font-info “OOO” Lorem ipsum. Lorem ipsum.
+                              .divider
+                              %div
+                                Подблок “​Договор​” – вебчасть профиля партнера, отображающая информацию о договоре с партнером.
+                              .divider
+                          .col-sm-12.col-md-6
+                            .portlet__head
+                              .portlet__head-label
+                                %h3.portlet__head-title Контакты
+                              .portlet__head-toolbar
+                                %button.btn.btn-success.btn-inverse.btn-sm{"data-target" => "#modal_add_contact", "data-toggle" => "modal", :type => "button"}
+                                  %i.fas.fa-user-plus.font-success
+                            .portlet__body
+                              .info-table
+                                .item
+                                  .item__left
+                                    %strong.font-info Melania Trump
+                                    .font-weight-light Директор
+                                  .item__right
+                                    %strong +999(99) 999-99-99-99
+                                    %div bla_bla_bla_bla_bla@gmail.com
+                                  .item__right
+                                    %button.btn.btn-success.btn-inverse.btn-sm.btn-action{"data-placement" => "top", "data-toggle" => "tooltip", :title => "Edit", :type => "button"}
+                                      %i.fas.fa-edit
+                                    %button.btn.btn-danger.btn-inverse.btn-sm.btn-action{"data-placement" => "top", "data-toggle" => "tooltip", :title => "Delete", :type => "button"}
+                                      %i.fas.fa-trash-alt
+                                .item
+                                  .item__left
+                                    %strong.font-info Melania Trump
+                                    .font-weight-light Директор
+                                  .item__right
+                                    %strong +999(99) 999-99-99-99
+                                    %div bla_bla_bla_bla_bla@gmail.com
+                                  .item__right
+                                    %button.btn.btn-success.btn-inverse.btn-sm.btn-action{"data-placement" => "top", "data-toggle" => "tooltip", :title => "Edit", :type => "button"}
+                                      %i.fas.fa-edit
+                                    %button.btn.btn-danger.btn-inverse.btn-sm.btn-action{"data-placement" => "top", "data-toggle" => "tooltip", :title => "Delete", :type => "button"}
+                                      %i.fas.fa-trash-alt
+                                .item
+                                  .item__left
+                                    %strong.font-info Melania Trump
+                                    .font-weight-light Директор
+                                  .item__right
+                                    %strong +999(99) 999-99-99-99
+                                    %div bla_bla_bla_bla_bla@gmail.com
+                                  .item__right
+                                    %button.btn.btn-success.btn-inverse.btn-sm.btn-action{"data-placement" => "top", "data-toggle" => "tooltip", :title => "Edit", :type => "button"}
+                                      %i.fas.fa-edit
+                                    %button.btn.btn-danger.btn-inverse.btn-sm.btn-action{"data-placement" => "top", "data-toggle" => "tooltip", :title => "Delete", :type => "button"}
+                                      %i.fas.fa-trash-alt
+                      / End .tab-pane
+                      #tab2.tab-pane.fade{:role => "tabpanel"}
+                        .table-responsive
+                          %table.table.table--striped.table--selectable-row
+                            %thead
+                              %tr
+                                %th
+                                  %label.checkbox
+                                    %input{:name => "checkAll", :type => "checkbox"}/
+                                    %span
+                                  №
+                                %th Title
+                                %th Date
+                                %th Status
+                                %th Actions
+                                %th
+                            %tbody
+                              %tr.row-danger
+                                %td
+                                  %label.checkbox
+                                    %input{:name => "id", :type => "checkbox"}/
+                                    %span
+                                  1
+                                %td Классический тур
+                                %td 11/10/2018
+                                %td
+                                  %span.label.label--danger danger
+                                %td
+                                  %button.btn.btn-success.btn-inverse.btn-sm.btn-action{"data-placement" => "top", "data-toggle" => "tooltip", :title => "Edit", :type => "button"}
+                                    %i.fas.fa-edit
+                                  %button.btn.btn-danger.btn-inverse.btn-sm.btn-action{"data-placement" => "top", "data-toggle" => "tooltip", :title => "Delete", :type => "button"}
+                                    %i.fas.fa-trash-alt
+                                  %button.btn.btn-success.btn-sm{:type => "button"} Details
+                                %td
+                                  %label.switch.switch-primary
+                                    %input{:type => "checkbox"}/
+                                    %span.slider.round
+                              %tr.row-danger
+                                %td
+                                  %label.checkbox
+                                    %input{:name => "id", :type => "checkbox"}/
+                                    %span
+                                  1
+                                %td Классический тур
+                                %td 11/10/2018
+                                %td
+                                  %span.label.label--danger danger
+                                %td
+                                  %button.btn.btn-success.btn-inverse.btn-sm.btn-action{"data-placement" => "top", "data-toggle" => "tooltip", :title => "Edit", :type => "button"}
+                                    %i.fas.fa-edit
+                                  %button.btn.btn-danger.btn-inverse.btn-sm.btn-action{"data-placement" => "top", "data-toggle" => "tooltip", :title => "Delete", :type => "button"}
+                                    %i.fas.fa-trash-alt
+                                  %button.btn.btn-success.btn-sm{:type => "button"} Details
+                                %td
+                                  %label.switch.switch-primary
+                                    %input{:type => "checkbox"}/
+                                    %span.slider.round
+                              %tr.row-brand
+                                %td
+                                  %label.checkbox
+                                    %input{:name => "id", :type => "checkbox"}/
+                                    %span
+                                  2
+                                %td Классический тур
+                                %td 11/10/2018
+                                %td
+                                  %span.label.label--success success
+                                %td
+                                  %button.btn.btn-success.btn-inverse.btn-sm.btn-action{"data-placement" => "top", "data-toggle" => "tooltip", :title => "Edit", :type => "button"}
+                                    %i.fas.fa-edit
+                                  %button.btn.btn-danger.btn-inverse.btn-sm.btn-action{"data-placement" => "top", "data-toggle" => "tooltip", :title => "Delete", :type => "button"}
+                                    %i.fas.fa-trash-alt
+                                  %button.btn.btn-success.btn-sm{:type => "button"} Details
+                                %td
+                                  %label.switch.switch-warning
+                                    %input{:type => "checkbox"}/
+                                    %span.slider
+                              %tr.selected-row.row-info
+                                %td
+                                  %label.checkbox
+                                    %input{:checked => "checked", :name => "id", :type => "checkbox"}/
+                                    %span
+                                  3
+                                %td Классический тур
+                                %td 11/10/2018
+                                %td
+                                  %span.label.label--warning warning
+                                %td
+                                  %button.btn.btn-success.btn-inverse.btn-sm.btn-action{"data-placement" => "top", "data-toggle" => "tooltip", :title => "Edit", :type => "button"}
+                                    %i.fas.fa-edit
+                                  %button.btn.btn-danger.btn-inverse.btn-sm.btn-action{"data-placement" => "top", "data-toggle" => "tooltip", :title => "Delete", :type => "button"}
+                                    %i.fas.fa-trash-alt
+                                  %button.btn.btn-success.btn-sm{:type => "button"} Details
+                                %td
+                                  %label.switch.switch-success
+                                    %input{:type => "checkbox"}/
+                                    %span.slider.round
+                              %tr.row-warning
+                                %td
+                                  %label.checkbox
+                                    %input{:name => "id", :type => "checkbox"}/
+                                    %span
+                                  4
+                                %td Классический тур
+                                %td 11/10/2018
+                                %td
+                                  %span.label.label--info info
+                                %td
+                                  %button.btn.btn-success.btn-inverse.btn-sm.btn-action{"data-placement" => "top", "data-toggle" => "tooltip", :title => "Edit", :type => "button"}
+                                    %i.fas.fa-edit
+                                  %button.btn.btn-danger.btn-inverse.btn-sm.btn-action{"data-placement" => "top", "data-toggle" => "tooltip", :title => "Delete", :type => "button"}
+                                    %i.fas.fa-trash-alt
+                                  %button.btn.btn-success.btn-sm{:type => "button"} Details
+                                %td
+                                  %label.switch.switch-info
+                                    %input{:type => "checkbox"}/
+                                    %span.slider.round
+                              %tr.row-success
+                                %td
+                                  %label.checkbox
+                                    %input{:name => "id", :type => "checkbox"}/
+                                    %span
+                                  5
+                                %td Классический тур
+                                %td 11/10/2018
+                                %td
+                                  %span.label.label--primary primary
+                                %td
+                                  %button.btn.btn-success.btn-inverse.btn-sm.btn-action{"data-placement" => "top", "data-toggle" => "tooltip", :title => "Edit", :type => "button"}
+                                    %i.fas.fa-edit
+                                  %button.btn.btn-danger.btn-inverse.btn-sm.btn-action{"data-placement" => "top", "data-toggle" => "tooltip", :title => "Delete", :type => "button"}
+                                    %i.fas.fa-trash-alt
+                                  %button.btn.btn-success.btn-sm{:type => "button"} Details
+                                %td
+                                  %label.switch.switch-danger
+                                    %input{:type => "checkbox"}/
+                                    %span.slider.round
+                              %tr.row-default
+                                %td
+                                  %label.checkbox
+                                    %input{:name => "id", :type => "checkbox"}/
+                                    %span
+                                  6
+                                %td Классический тур
+                                %td 11/10/2018
+                                %td
+                                  %span.label.label--success.disabled disabled
+                                %td
+                                  %button.btn.btn-success.btn-inverse.btn-sm.btn-action{"data-placement" => "top", "data-toggle" => "tooltip", :title => "Edit", :type => "button"}
+                                    %i.fas.fa-edit
+                                  %button.btn.btn-danger.btn-inverse.btn-sm.btn-action{"data-placement" => "top", "data-toggle" => "tooltip", :title => "Delete", :type => "button"}
+                                    %i.fas.fa-trash-alt
+                                  %button.btn.btn-success.btn-sm{:type => "button"} Details
+                                %td
+                                  %label.switch.switch-info
+                                    %input{:type => "checkbox"}/
+                                    %span.slider.round
+                              %tr
+                                %td
+                                  %label.checkbox
+                                    %input{:name => "id", :type => "checkbox"}/
+                                    %span
+                                  7
+                                %td Классический тур
+                                %td 11/10/2018
+                                %td
+                                  %span.label.label--success success
+                                %td
+                                  %button.btn.btn-success.btn-inverse.btn-sm.btn-action{"data-placement" => "top", "data-toggle" => "tooltip", :title => "Edit", :type => "button"}
+                                    %i.fas.fa-edit
+                                  %button.btn.btn-danger.btn-inverse.btn-sm.btn-action{"data-placement" => "top", "data-toggle" => "tooltip", :title => "Delete", :type => "button"}
+                                    %i.fas.fa-trash-alt
+                                  %button.btn.btn-success.btn-sm{:type => "button"} Details
+                                %td
+                                  %label.switch.switch-info
+                                    %input{:type => "checkbox"}/
+                                    %span.slider.round
+                              %tr
+                                %td
+                                  %label.checkbox
+                                    %input{:name => "id", :type => "checkbox"}/
+                                    %span
+                                  8
+                                %td Классический тур
+                                %td 11/10/2018
+                                %td
+                                  %span.label.label--success success
+                                %td
+                                  %button.btn.btn-success.btn-inverse.btn-sm.btn-action{"data-placement" => "top", "data-toggle" => "tooltip", :title => "Edit", :type => "button"}
+                                    %i.fas.fa-edit
+                                  %button.btn.btn-danger.btn-inverse.btn-sm.btn-action{"data-placement" => "top", "data-toggle" => "tooltip", :title => "Delete", :type => "button"}
+                                    %i.fas.fa-trash-alt
+                                  %button.btn.btn-success.btn-sm{:type => "button"} Details
+                                %td
+                                  %label.switch.switch-info
+                                    %input{:type => "checkbox"}/
+                                    %span.slider.round
+                              %tr
+                                %td
+                                  %label.checkbox
+                                    %input{:name => "id", :type => "checkbox"}/
+                                    %span
+                                  9
+                                %td Классический тур
+                                %td 11/10/2018
+                                %td
+                                  %span.label.label--success success
+                                %td
+                                  %button.btn.btn-success.btn-inverse.btn-sm.btn-action{"data-placement" => "top", "data-toggle" => "tooltip", :title => "Edit", :type => "button"}
+                                    %i.fas.fa-edit
+                                  %button.btn.btn-danger.btn-inverse.btn-sm.btn-action{"data-placement" => "top", "data-toggle" => "tooltip", :title => "Delete", :type => "button"}
+                                    %i.fas.fa-trash-alt
+                                  %button.btn.btn-success.btn-sm{:type => "button"} Details
+                                %td
+                                  %label.switch.switch-info
+                                    %input{:type => "checkbox"}/
+                                    %span.slider.round
+                              %tr
+                                %td
+                                  %label.checkbox
+                                    %input{:name => "id", :type => "checkbox"}/
+                                    %span
+                                  10
+                                %td Классический тур
+                                %td 11/10/2018
+                                %td
+                                  %span.label.label--success success
+                                %td
+                                  %button.btn.btn-success.btn-inverse.btn-sm.btn-action{"data-placement" => "top", "data-toggle" => "tooltip", :title => "Edit", :type => "button"}
+                                    %i.fas.fa-edit
+                                  %button.btn.btn-danger.btn-inverse.btn-sm.btn-action{"data-placement" => "top", "data-toggle" => "tooltip", :title => "Delete", :type => "button"}
+                                    %i.fas.fa-trash-alt
+                                  %button.btn.btn-success.btn-sm{:type => "button"} Details
+                                %td
+                                  %label.switch.switch-info
+                                    %input{:type => "checkbox"}/
+                                    %span.slider.round
+                      / End .tab-pane
+                      #tab3.tab-pane.fade{:role => "tabpanel"}
+                        #accordionExample.dt-accordion.accordion.accordion--white
+                          .card
+                            .card-header{"data-target" => "#collapse1", "data-toggle" => "collapse"}
+                              .card-header__inner
+                                %i.far.fa-user
+                                %h3.card-header__title
+                                  Deals
+                                  %span.font-danger (19)
+                            #collapse1.collapse.show{"data-parent" => "#accordionExample"}
+                              .card-body
+                                .table-responsive
+                                  %table.table.table2.text-center
+                                    %thead
+                                      %tr
+                                        %th
+                                        %th Классический
+                                        %th Классический
+                                        %th Классический
+                                        %th Классический
+                                        %th Классический
+                                    %tbody
+                                      %tr
+                                        %td Классический
+                                        %td
+                                          %label.checkbox
+                                            %input{:name => "id", :type => "checkbox"}/
+                                            %span
+                                        %td
+                                          %label.checkbox
+                                            %input{:name => "id", :type => "checkbox"}/
+                                            %span
+                                        %td
+                                          %label.checkbox
+                                            %input{:name => "id", :type => "checkbox"}/
+                                            %span
+                                        %td
+                                          %label.checkbox
+                                            %input{:name => "id", :type => "checkbox"}/
+                                            %span
+                                        %td
+                                          %label.checkbox
+                                            %input{:name => "id", :type => "checkbox"}/
+                                            %span
+                                      %tr
+                                        %td Классический
+                                        %td
+                                          %label.checkbox
+                                            %input{:name => "id", :type => "checkbox"}/
+                                            %span
+                                        %td
+                                          %label.checkbox
+                                            %input{:name => "id", :type => "checkbox"}/
+                                            %span
+                                        %td
+                                          %label.checkbox
+                                            %input{:name => "id", :type => "checkbox"}/
+                                            %span
+                                        %td
+                                          %label.checkbox
+                                            %input{:name => "id", :type => "checkbox"}/
+                                            %span
+                                        %td
+                                          %label.checkbox
+                                            %input{:name => "id", :type => "checkbox"}/
+                                            %span
+                                      %tr
+                                        %td Классический Тур
+                                        %td
+                                          %label.checkbox
+                                            %input{:name => "id", :type => "checkbox"}/
+                                            %span
+                                        %td
+                                          %label.checkbox
+                                            %input{:name => "id", :type => "checkbox"}/
+                                            %span
+                                        %td
+                                          %label.checkbox
+                                            %input{:name => "id", :type => "checkbox"}/
+                                            %span
+                                        %td
+                                          %label.checkbox
+                                            %input{:name => "id", :type => "checkbox"}/
+                                            %span
+                                        %td
+                                          %label.checkbox
+                                            %input{:name => "id", :type => "checkbox"}/
+                                            %span
+                          / End .card
+                          .card
+                            .card-header{"data-target" => "#collapse2", "data-toggle" => "collapse"}
+                              .card-header__inner
+                                %i.fas.fa-tags.font-success
+                                %h3.card-header__title
+                                  Lorem Ipsum has been the industry's standard
+                                  %span.font-success (31)
+                            #collapse2.collapse{"data-parent" => "#accordionExample"}
+                              .card-body
+                                .row
+                                  .col-lg-10.col-sm-12
+                                    .users-info
+                                      .users-info__row
+                                        .users-info__left
+                                          %h3 Lorem Ipsum - Lorem Ipsum
+                                        .users-info__center
+                                          %i.fas.fa-user-friends
+                                        .users-info__right.pl-40
+                                          %span.price
+                                            +$6700
+                                            %span.font-danger USD
+                                            \/ 9885
+                                            %span.font-success SUM
+                                      .users-info__row
+                                        .users-info__left
+                                          %strong.font-info Март 1, 2020 - Май 1, 2010
+                                        .users-info__center
+                                        .users-info__right.pl-40
+                                          %span.text-muted Март 1, 2020 - Май 1, 2010 Март 1, 2020 - Май 1, 2010
+                                      .users-info__row
+                                        .users-info__left.text-right
+                                          %i.fas.fa-user-friends.font-success
+                                          %span.font-info Март 1, 2020 - Май 1, 2010
+                                        .users-info__center
+                                          %i.fas.fa-user-friends
+                                        .users-info__right
+                                          %span.text-muted Март 1, 2020 - Май 1, 2010 Март 1, 2020 - Май 1, 2010
+                                      .users-info__row
+                                        .users-info__left.text-right
+                                          %i.fas.fa-user-friends.font-danger
+                                          %span Март 1, 2020 - Май 1, 2010
+                                        .users-info__center
+                                          %i.fas.fa-user-friends.text-muted
+                                        .users-info__right
+                                          %span.text-muted Март 1, 2020 - Май 1, 2010 Март 1, 2020 - Май 1, 2010
+                                      .users-info__row
+                                        .users-info__left.text-right
+                                          %i.fas.fa-user-friends.font-danger
+                                          %span.font-warning Март 1, 2020 - Май 1, 2010
+                                        .users-info__center
+                                          10
+                                        .users-info__right
+                                          %span.font-warning Март 1, 2020 - Май 1, 2010 Март 1, 2020 - Май 1, 2010
+                                    .users-info
+                                      .users-info__row
+                                        .users-info__left
+                                          %h3 Lorem Ipsum - Lorem Ipsum
+                                        .users-info__center
+                                          %i.fas.fa-user-friends
+                                        .users-info__right.pl-40
+                                          %span.price
+                                            +$6700
+                                            %span.font-danger USD
+                                            \/ 9885
+                                            %span.font-success SUM
+                                      .users-info__row
+                                        .users-info__left
+                                          %strong.font-info Март 1, 2020 - Май 1, 2010
+                                        .users-info__center
+                                        .users-info__right.pl-40
+                                          %span.text-muted Март 1, 2020 - Май 1, 2010 Март 1, 2020 - Май 1, 2010
+                                      .users-info__row
+                                        .users-info__left.text-right
+                                          %i.fas.fa-user-friends.font-success
+                                          %span.font-info Март 1, 2020 - Май 1, 2010
+                                        .users-info__center
+                                          %i.fas.fa-user-friends
+                                        .users-info__right
+                                          %span.text-muted Март 1, 2020 - Май 1, 2010 Март 1, 2020 - Май 1, 2010
+                                      .users-info__row
+                                        .users-info__left.text-right
+                                          %i.fas.fa-user-friends.font-danger
+                                          %span Март 1, 2020 - Май 1, 2010
+                                        .users-info__center
+                                          %i.fas.fa-user-friends.text-muted
+                                        .users-info__right
+                                          %span.text-muted Март 1, 2020 - Май 1, 2010 Март 1, 2020 - Май 1, 2010
+                                      .users-info__row
+                                        .users-info__left.text-right
+                                          %i.fas.fa-user-friends.font-danger
+                                          %span.font-warning Март 1, 2020 - Май 1, 2010
+                                        .users-info__center
+                                          10
+                                        .users-info__right
+                                          %span.font-warning Март 1, 2020 - Май 1, 2010 Март 1, 2020 - Май 1, 2010
+                          / End .card
+                          .card
+                            .card-header{"data-target" => "#collapse3", "data-toggle" => "collapse"}
+                              .card-header__inner
+                                %i.far.fa-user.font-danger
+                                %h3.card-header__title Lorem Ipsum has been the industry's standard
+                            #collapse3.collapse{"data-parent" => "#accordionExample"}
+                              .card-body
+                                %p Collapse 3 content
+                          / End .card
+                        / End .accordion
+                      / End .tab-pane
+                      #tab4.tab-pane.fade{:role => "tabpanel"}
+                        .widget2
+                          .widget2__item.widget2__item--primary
+                            .widget2__checkbox
+                              %label.checkbox.checkbox--solid.checkbox--single
+                                %input{:type => "checkbox"}/
+                                %span
+                            .widget2__info
+                              %a.widget2__title{:href => "#"}
+                                Make Metronic Great Again.Lorem Ipsum Amet
+                              %a.widget2__username{:href => "#"}
+                                By Bob
+                          .widget2__item.widget2__item--warning
+                            .widget2__checkbox
+                              %label.checkbox.checkbox--solid.checkbox--single
+                                %input{:type => "checkbox"}/
+                                %span
+                            .widget2__info
+                              %a.widget2__title{:href => "#"}
+                                Prepare Docs For Metting On Monday
+                              %a.widget2__username{:href => "#"}
+                                By Sean
+                          .widget2__item.widget2__item--brand
+                            .widget2__checkbox
+                              %label.checkbox.checkbox--solid.checkbox--single
+                                %input{:type => "checkbox"}/
+                                %span
+                            .widget2__info
+                              %a.widget2__title{:href => "#"}
+                                Make Widgets Development. Estudiat Communy Elit
+                              %a.widget2__username{:href => "#"}
+                                By Aziko
+                          .widget2__item.widget2__item--success
+                            .widget2__checkbox
+                              %label.checkbox.checkbox--solid.checkbox--single
+                                %input{:type => "checkbox"}/
+                                %span
+                            .widget2__info
+                              %a.widget2__title{:href => "#"}
+                                Make Metronic Development. Lorem Ipsum
+                              %a.widget2__username{:href => "#"}
+                                By James
+                          .widget2__item.widget2__item--danger
+                            .widget2__checkbox
+                              %label.checkbox.checkbox--solid.checkbox--single
+                                %input{:type => "checkbox"}/
+                                %span
+                            .widget2__info
+                              %a.widget2__title{:href => "#"}
+                                Completa Financial Report For Emirates Airlines
+                              %a.widget2__username{:href => "#"}
+                                By Bob
+                          .widget2__item.widget2__item--info
+                            .widget2__checkbox
+                              %label.checkbox.checkbox--solid.checkbox--single
+                                %input{:type => "checkbox"}/
+                                %span
+                            .widget2__info
+                              %a.widget2__title{:href => "#"}
+                                Completa Financial Report For Emirates Airlines
+                              %a.widget2__username{:href => "#"}
+                                By Sean
+                      / End .tab-pane
+                      #tab5.tab-pane.fade{:role => "tabpanel"}
+                        .activity-list
+                          .activity__item
+                            .clearfix.mb-10
+                              .fl-left.d-flex.align-items-center
+                                .user-img.user-img--md.mr-4
+                                  %img.img-fluid{:alt => "...", :src => "https://keenthemes.com/metronic/themes/metronic/theme/default/demo6/dist/assets/media/users/100_4.jpg"}/
+                                %div
+                                  .font-weight-bold Melania Trump
+                                  %time.activity__item__time 2 day ago
+                              .fl-right
+                                %strong.font-info Pending
+                            %div
+                              Lorem Ipsum is simply dummy text of the printing and typesetting industry scrambled it to make text of the printing and typesetting industry scrambled a type specimen book text.
+                          / End .activity__item
+                          .activity__item
+                            .clearfix.mb-10
+                              .fl-left.d-flex.align-items-center
+                                .user-img.user-img--md.mr-4
+                                  %img.img-fluid{:alt => "...", :src => "https://keenthemes.com/metronic/themes/metronic/theme/default/demo6/dist/assets/media/users/100_4.jpg"}/
+                                %div
+                                  .font-weight-bold Melania Trump
+                                  %time.activity__item__time 2 day ago
+                              .fl-right
+                                %strong.font-brand Open
+                            %div
+                              Lorem Ipsum is simply dummy text of the printing and typesetting industry scrambled it to make text of the printing and typesetting industry scrambled a type specimen book text.
+                          / End .activity__item
+                          .activity__item
+                            .clearfix.mb-10
+                              .fl-left.d-flex.align-items-center
+                                .user-img.user-img--md.mr-4
+                                  %img.img-fluid{:alt => "...", :src => "https://keenthemes.com/metronic/themes/metronic/theme/default/demo6/dist/assets/media/users/100_4.jpg"}/
+                                %div
+                                  .font-weight-bold Melania Trump
+                                  %time.activity__item__time 2 day ago
+                              .fl-right
+                                %strong.font-success Open
+                            %div
+                              Lorem Ipsum is simply dummy text of the printing and typesetting industry scrambled it to make text of the printing and typesetting industry scrambled a type specimen book text.
+                          / End .activity__item
+                      / End .tab-pane
+                      #tab6.tab-pane.fade{:role => "tabpanel"}
+                        / begin::Form
+                        %form.kt-form.kt-form--label-right
+                          .kt-portlet__body
+                            .form-group.row
+                              %label.col-form-label.col-lg-2.col-sm-12 Valid State
+                              .col-lg-6.col-md-9.col-sm-12
+                                .input-group.date
+                                  %input#kt_datetimepicker_1_validate.form-control.is-valid{:placeholder => "Select date", :readonly => "readonly", :type => "text"}/
+                                  .input-group-append
+                                    %span.input-group-text
+                                      %i.far.fa-calendar-check
+                                  .valid-feedback
+                                    Success! You"ve done it.
+                                %span.form-text.text-muted Example help text that remains unchanged.
+                            .form-group.row
+                              %label.col-form-label.col-lg-2.col-sm-12 Invalid State
+                              .col-lg-6.col-md-9.col-sm-12
+                                .input-group.date
+                                  %input#kt_datetimepicker_2_validate.form-control.is-invalid{:placeholder => "Select date", :readonly => "readonly", :type => "text"}/
+                                  .input-group-append
+                                    %span.input-group-text
+                                      %i.far.fa-calendar-check
+                                  .invalid-feedback
+                                    Sorry, the date is taken. Try another date?
+                                %span.form-text.text-muted Example help text that remains unchanged.
+                          .kt-portlet__foot
+                            .kt-form__actions
+                              .row
+                                .col-lg-9.ml-lg-auto
+                                  %button.btn.btn-primary{:type => "submit"} Submit
+                                  %button.btn.btn-secondary{:type => "submit"} Cancel
+                        / end::Form
+                      / End .tab-pane
+                  / End .portlet__body
+          / End .portlet__body
+    #scrollToTop.scrollToTop
+      %i.fas.fa-arrow-up
+    #modal_add.modal.fade
+      .modal-dialog{:role => "document"}
+        .modal-content
+          .modal-header
+            %h4.modal-title Add new partner
+            %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+              %span{"aria-hidden" => "true"} ×
+              %span.sr-only Close
+          .modal-body
+            #layout_modal_errors
+              %ul.errors-list
+                %li Name can't be blank
+                %li INN can't be blank
+                %li City can't be blank
+            %form
+              .form-group.invalid
+                .field_with_errors
+                  %label.control-label{:for => ""} Company name *
+                .field_with_errors
+                  %input.form-control.is-invalid{:type => "text"}/
+                  .invalid-feedback Company name can’t be blank.
+              .form-group
+                %label.control-label{:for => ""} INN *
+                %input.form-control{:type => "text"}/
+              .form-group.valid
+                %label.control-label{:for => ""} City
+                %select.select2.select2-single.form-control.is-valid
+                  %optgroup{:label => "Alaskan/Hawaiian Time Zone"}
+                    %option{:value => "AK"} Alaska
+                    %option{:value => "HI"} Hawaii
+                  %optgroup{:label => "Pacific Time Zone"}
+                    %option{:value => "CA"} California
+                    %option{:value => "NV"} Nevada
+                    %option{:value => "OR"} Oregon
+                    %option{:value => "WA"} Washington
+                  %optgroup{:label => "Mountain Time Zone"}
+                    %option{:value => "AZ"} Arizona
+                    %option{:value => "CO"} Colorado
+                    %option{:value => "ID"} Idaho
+                    %option{:value => "MT"} Montana
+                    %option{:value => "NE"} Nebraska
+                    %option{:value => "NM"} New Mexico
+                    %option{:value => "ND"} North Dakota
+                    %option{:value => "UT"} Utah
+                    %option{:value => "WY"} Wyoming
+                .valid-feedback Select can’t be blank.
+          .modal-footer
+            %button.btn.btn-secondary{"data-dismiss" => "modal", :type => "button"} Close
+            %button.btn.btn-primary{:type => "button"} Create
+        / /.modal-content
+      / /.modal-dialog
+    / /.modal
+    #modal_add_contact.modal.fade
+      .modal-dialog{:role => "document"}
+        .modal-content
+          .modal-header
+            %h4.modal-title Add new contact
+            %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+              %span{"aria-hidden" => "true"} ×
+              %span.sr-only Close
+          .modal-body
+            #layout_modal_errors
+              %ul.errors-list
+                %li Full name can't be blank
+            %form
+              .form-group.invalid
+                .field_with_errors
+                  %label.control-label{:for => ""} Full name *
+                .field_with_errors
+                  %input.form-control.is-invalid{:type => "text"}/
+                  .invalid-feedback Full name can’t be blank.
+              .form-group
+                %label.control-label{:for => ""} Birthday(calendar)
+                %input.form-control{:type => "text"}/
+              .form-group
+                %label.control-label{:for => ""} Position
+                %input.form-control{:type => "text"}/
+              .form-group
+                %label.control-label{:for => ""} Phone
+                %input.form-control{:type => "text"}/
+              .form-group
+                %label.control-label{:for => ""} Email
+                %input.form-control{:type => "text"}/
+          .modal-footer
+            %button.btn.btn-secondary{"data-dismiss" => "modal", :type => "button"} Close
+            %button.btn.btn-primary{:type => "button"} Create
+        / /.modal-content
+      / /.modal-dialog
+    / /.modal
+    %script{:src => "https://code.jquery.com/jquery-3.1.1.min.js"}
+    %script{:crossorigin => "anonymous", :integrity => "sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo", :src => "https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"}
+    %script{:src => "js/bootstrap.min.js"}
+    %script{:src => "js/select2.min.js"}
+    %script{:src => "js/bootstrap-datetimepicker.min.js"}
+    %script{:src => "js/script.js"}

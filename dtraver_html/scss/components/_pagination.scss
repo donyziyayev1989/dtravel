@@ -1,0 +1,43 @@
+.pagination{
+
+}
+.page-item{
+	margin-left: 3px;
+	margin-right: 3px;
+	.page-link{
+		min-width: 32px;
+		height: 32px;
+		text-align: center;
+		padding: 8px 2px;
+		border-radius: 16px !important;
+		border: none;
+		transition: background 300ms;
+		cursor: pointer;
+	}
+	a.page-link{
+		color:$text-color2;
+		&:hover, &:focus{
+			background: $info;
+			color:$white;
+		}
+	}
+	&.active a.page-link{
+		background: $info;
+		color:$white;
+	}
+	span.page-link{
+		color:$info;
+		background: $light-grey;
+		&:hover, &:focus{
+			background: darken($light-grey, 10%);
+		}
+	}
+	&.disabled{
+		span.page-link{
+			color:$info;
+			background: $light-grey;
+			cursor: pointer;
+			
+		}
+	}
+}

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Page Title</title>
+
+	<!-- Google font -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700&display=swap&subset=cyrillic" rel="stylesheet">
+	
+	<!-- Fontawesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css" integrity="sha384-REHJTs1r2ErKBuJB0fCK99gCYsVjwxHrSU0N7I1zl9vZbggVJXRMsv/sLlOAGb4M" crossorigin="anonymous">
+
+	<!-- Style css -->
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="cheque-page">
+	<section class="wrapper ">
+		<!-- .sidebar--left -->
+		<aside class="sidebar sidebar--left">
+			<ul class="link-list link-list--top">
+				<li class="active"><a href="#" class="btn btn-lg"><i class="icon fas fa-receipt"></i></a></li>
+				<li><a href="#" class="btn btn-lg"><i class="icon fas fa-exchange-alt"></i></a></li>
+				<li><a href="#" class="btn btn-lg"><i class="icon fas fa-save"></i></a></li>
+				<li><a href="#" class="btn btn-lg"><i class="icon fas fa-money-check-alt"></i></a></li>
+				<li><a href="#" class="btn btn-lg"><i class="icon fas fa-history"></i></a></li>
+			</ul>
+			<ul class="link-list link-list--bottom">
+				<li><a href="#" class="btn btn-lg"><i class="icon fas fa-home"></i></a></li>
+				<li><a href="#" class="btn btn-lg"><i class="icon fas fa-sign-in-alt"></i></a></li>
+			</ul>
+		</aside>
+		<!-- End .sidebar--left -->
+
+
+		<!-- End .main-content -->
+		<main class="main-content">
+
+			<div class="main-content__center">
+				<div class="print-cheque">
+					<div id="print-area" class="print-area">
+						<div class="print__image">
+							<img src="images/b_PKXgPSYzQ@2x.png" class="img-fluid" alt="">
+						</div>
+						<h2 class="heading">Название магазина</h2>
+						<p>Реквизиты <br> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s</p>
+
+						<div class="divider"></div>
+
+						<p class="text-center">Введите текст для верхней части чека <br> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s</p>
+
+						<div class="divider"></div>
+
+						<div class="d-flex">
+							<div class="flex__left">
+								<div>Чек № 98905894</div>
+								<div>Дата: 24.02.2020 12:40</div>
+								<div>Кассир: ФИО кассира</div>
+								<div>Смена №: ФИО кассира</div>
+							</div>
+							<div class="flex__right">
+								<div>ИНН: 989058943455</div>
+								<div>Инфо: Инфо инфо инфо</div>
+							</div>
+						</div>
+
+						<div class="divider"></div>
+
+						<h2 class="heading">Кассовый чек</h2>
+						<div class="divider"></div>
+
+						<div class="d-flex mb-5">
+							<div class="flex__left">Угольный карандаш “Epica”</div>
+							<div class="flex__right">*2 500 * 1 = 2 500</div>
+						</div>
+						<div class="d-flex mb-5">
+							<div class="flex__left">Угольный карандаш “Epica” Угольный карандаш “Epica”</div>
+							<div class="flex__right">*2 500 * 1 = 2 500</div>
+						</div>
+						<div class="d-flex mb-5">
+							<div class="flex__left">Угольный карандаш “Epica”</div>
+							<div class="flex__right">*999 999 999 * 999 000 = 999 999 999</div>
+						</div>
+
+						<div class="divider"></div>
+
+						<div class="d-flex">
+							<div class="flex__left"><strong class="h5 text-uppercase">СУММА ЧЕКa</strong></div>
+							<div class="flex__right"><strong class="h5">2 500 Сўм</strong></div>
+						</div>
+						<div class="d-flex">
+							<div class="flex__left"><strong class="h5 text-uppercase">ИТОГ</strong></div>
+							<div class="flex__right"><strong class="h5">2 500 Сўм</strong></div>
+						</div>
+
+						<div class="divider"></div>
+
+						<div class="d-flex">
+							<div class="flex__left"><strong class="h5">Наличными</strong></div>
+							<div class="flex__right"><strong class="h5">2 500 Сўм</strong></div>
+						</div>
+						<div class="d-flex">
+							<div class="flex__left"><strong class="h5">Банковская карта</strong></div>
+							<div class="flex__right"><strong class="h5">2 500 Сўм</strong></div>
+						</div>
+
+						<div class="divider"></div>
+
+						<div class="d-flex">
+							<div class="flex__left">Клиент: Иван Иванов</div>
+							<div class="flex__right">Lorem Ipsum is simply dummy text</div>
+						</div>
+						<div class="d-flex">
+							<div class="flex__left">Номер карты: ***** 9085</div>
+							<div class="flex__right">Lorem Ipsum is simply dummy text</div>
+						</div>
+						<div class="divider"></div>
+						<p class="text-center">Введите текст для нижней части чека <br> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s</p>
+						<div class="divider"></div>
+					</div> <!-- End .print-area -->
+
+					<button type="button" id="print-cheque__btn" onclick="window.print();return false;" class="btn btn-lg btn-block btn-success-bg">Печать</button>
+				</div>
+			</div> <!-- End .main-content__center -->
+
+		</main>
+		<!-- End .main-content -->
+
+
+		<!-- .sidebar--right -->
+		<aside class="sidebar sidebar--right">
+			<button class="sidebar-toggle btn">
+				<i class="fas fa-bars"></i>
+			</button>
+			
+			<div class="widget">
+				<form action="#" class="mb-15 pl-10 pr-10">
+					<div class="form-group">
+						<label for="" class="control-label">Консультант</label>
+						<select name="" id="" class="form-control">
+							<option value="">Консультант 1</option>
+							<option value="">Консультант 2</option>
+							<option value="">Консультант 3</option>
+							<option value="">Консультант 4</option>
+						</select>
+					</div>
+				</form>
+			</div> <!-- END .widget -->
+
+			<div class="widget">
+				<form action="#" class="pl-10 pr-10">
+					<label for="" class="control-label">Выберите клиента (F3)</label>
+					<div class="d-flex mb-10">
+						<div class="form-group has-addon flex-grow-1 mr-10">
+							<input type="search" class="form-control">
+							<span class="form-group__addon">
+								<button class="btn btn-search"><i class="fas fa-search"></i></button>
+							</span>
+						</div>
+						<button type="submit" class="btn btn-transparent " ><i class="fas fa-user-plus"></i></button>
+					</div>
+				</form>
+			</div> <!-- END .widget -->
+
+			
+
+			<div class="sidebar__bottom">
+				<div class=" ">
+					<div class="row">
+						<div class="col col-12">
+							<div class="sidebar__bottom__block bd-radius--left-bottom bd-radius--right-bottom">
+								<div class="collapse add-info-wrap">
+									<form class="add-info ">
+										<textarea name="" id="" cols="30" rows="5"></textarea>
+										<button class="btn btn-dark btn-submit" type="button">
+											<i class="fas fa-check"></i>
+										</button>
+									</form>
+								</div>
+								<div class="toggle" data-toggle="collapse" data-target=".collapse.add-info-wrap" >
+									<span class="collapse-off"><i class="fas fa-chevron-up"></i> Добавить описание к чеку</span>
+									<span class="collapse-on"><i class="fas fa-chevron-down"></i> Скрыть</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col col-12">
+							<div class="sidebar__bottom__block bd-radius--right-bottom">
+								Название торговой точки
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col col-4">
+							<div class="time sidebar__bottom__block bd-radius--left-bottom bd-radius--left-top">12:03</div>
+						</div>
+						<div class="col col-8">
+							<div class="sidebar__bottom__block bd-radius--right-top">User Full name</div>
+							<div class="sidebar__bottom__block bd-radius--right-bottom">Нет подключения к серверу <i class="fas fa-circle font-danger"></i></div>
+						</div>
+					</div>
+				</div>
+			</div> <!-- End .sidebar__bottom -->
+		</aside>
+		<!-- End .sidebar--right -->
+
+
+	</section>
+
+	<script src="js/script.js"></script>
+</body>
+</html>

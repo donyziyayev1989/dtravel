@@ -1,0 +1,66 @@
+// Footer
+.footer{
+	background: $white;
+	padding: 19px 0;
+	margin-top: auto;
+	
+	.row{
+		align-items: center;
+	}
+	p{
+		margin-bottom: 0;
+	}
+}
+.footer__list{
+	list-style-type: none;
+	padding-left: 0;
+	display: inline-flex;
+	margin-bottom: 0;
+	li{
+		a{
+			display: block;
+			padding: 6px 10px;
+			@include transition;
+			color:$text-color;
+			&:hover, &:focus{
+				color:$info;
+				text-decoration: none;
+				
+			}
+		}
+	}
+	@include maxsm {
+		display: block;
+		
+	}
+}
+@include minmd {
+	.footer__right{
+		text-align: right;
+	}
+}
+.scrollToTop{
+	width: 47px;
+	height: 47px;
+	line-height: 47px;
+	text-align: center;
+	color:$white;
+	border-radius: 50%;
+	background: $info;
+	opacity: 0;
+	font-size: 18px;
+	position: fixed;
+	right: 20px;
+	cursor: pointer;
+	bottom: -50px;
+	transition: bottom 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55), opacity 0.3s, background-color 0.3s, border-color 0.3s;
+	@include transition;
+	
+	&.visible {
+	    bottom: 30px;
+	    opacity: 0.5;
+	    &:hover, &:focus{
+			opacity: 1;
+		}
+	}
+}

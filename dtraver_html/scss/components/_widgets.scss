@@ -1,0 +1,89 @@
+// Widgets
+.widget2 {
+                              
+} 
+.widget2__item {
+    display: flex;
+    align-items: center;        
+    margin-bottom: 1.4rem;
+    position: relative;               
+    padding-top: 6px;
+    padding-bottom: 6px;
+    // state bar
+    &:before {
+        position: absolute;
+        display: block;
+        width: 0.3rem;
+        border-radius: 4px;                
+        width: 4px;
+        border-radius: 4px;
+        height: 100%;
+        left: 0.8rem;
+        content: "";
+    }  
+        
+    // checkbox
+    .widget2__checkbox {
+        padding: 0 0 0 2.5rem;
+        margin-right: 5px;                           
+    }
+
+    // description text
+    .widget2__info {
+        display: flex;
+        flex-direction: column;
+        padding-left: 0.23rem 0 0 0.3rem;                 
+
+        .widget2__title {
+            font-size: 1.3rem;
+            margin: 0;
+            color: base-color(label, 3);
+            transition: color 0.3s ease;
+
+            &:hover {
+                color: brand-color();
+                transition: color 0.3s ease;
+            }
+        }
+
+        .widget2__username {
+            text-decoration: none;                    
+            font-size: 1.1rem;
+            color: base-color(label, 2);
+            transition: color 0.3s ease;
+
+            &:hover {
+                text-decoration: none;
+                color: brand-color();
+                transition: color 0.3s ease;
+            }                    
+        }
+        a{
+            color:$text-color;
+            &:hover, &:focus{
+                color:$info;
+                text-decoration: none;
+                
+            }
+        }
+    }
+
+    &.widget2__item--info:before{
+        background: $info
+    }
+    &.widget2__item--success:before{
+        background: $success
+    } 
+    &.widget2__item--primary:before{
+        background: $primary
+    } 
+    &.widget2__item--danger:before{
+        background: $danger
+    } 
+    &.widget2__item--warning:before{
+        background: $warning
+    } 
+    &.widget2__item--brand:before{
+        background: $brand
+    }
+}  

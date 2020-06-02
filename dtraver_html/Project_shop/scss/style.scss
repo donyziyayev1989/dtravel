@@ -1,0 +1,21 @@
+// Partials
+@import 'partials/reset';
+@import 'partials/mixins';
+@import 'partials/variables';
+@import 'partials/typography';
+@import 'partials/ui';
+@import 'partials/layout';
+
+// Components
+@import 'components/left-sidebar';
+@import 'components/right-sidebar';
+@import 'components/widgets';
+@import 'components/modal';
+@import 'components/datepicker';
+
+// Pages
+@import 'pages/cheque';
+@import 'pages/payment';
+@import 'pages/unnamed-page';
+@import 'pages/print';
+@import 'pages/history';

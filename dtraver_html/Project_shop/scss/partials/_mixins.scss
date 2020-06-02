@@ -1,0 +1,85 @@
+
+@mixin maxextralg{
+  @media (max-width: #{$screen-extra-lg}){
+    @content;
+  }
+}
+@mixin maxlg{
+  @media (max-width: #{$screen-lg}){
+    @content;
+  }
+}
+@mixin maxmd{
+  @media (max-width: #{$screen-md}){
+    @content;
+  }
+}
+@mixin maxsm{
+  @media (max-width: #{$screen-sm}){
+    @content;
+  }
+}
+@mixin maxxs{
+  @media (max-width: #{$screen-xs}){
+    @content;
+  }
+}
+
+
+@mixin minextralg{
+  @media (min-width: #{$screen-extra-lg + 1}){
+    @content;
+  }
+}
+@mixin minlg{
+  @media (min-width: #{$screen-lg + 1}){
+    @content;
+  }
+}
+@mixin minmd{
+  @media (min-width: #{$screen-md + 1}){
+    @content;
+  }
+}
+@mixin minsm{
+  @media (min-width: #{$screen-sm + 1}){
+    @content;
+  }
+}
+@mixin minxs{
+  @media (min-width: #{$screen-xs + 1}){
+    @content;
+  }
+}
+
+
+@mixin xstosm{
+  @media (min-width: #{($screen-xs + 1)}) and (max-width: #{$screen-sm}){
+    @content;
+  }
+}
+@mixin smtomd{
+  @media (min-width: #{($screen-sm + 1)}) and (max-width: #{$screen-md}){
+    @content;
+  }
+}
+@mixin smtolg{
+  @media (min-width: #{$screen-sm + 1}) and (max-width: #{$screen-lg}){
+    @content;
+  }
+}
+@mixin mdtolg{
+  @media (min-width: #{$screen-md + 1}) and (max-width: #{$screen-lg}){
+    @content;
+  }
+}
+@mixin lgtoextralg{
+  @media (min-width: #{$screen-lg + 1}) and (max-width: #{$screen-extra-lg}){
+    @content;
+  }
+}
+@mixin extralgto4k{
+  @media (min-width: #{$screen-extra-lg + 1}) and (max-width: #{$screen-4k}){
+    @content;
+  }
+}

@@ -1,0 +1,358 @@
+/*********************************************************************/
+/* Form elements */
+/*********************************************************************/
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 22px;
+  /* Hide default HTML checkbox */
+  & input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 17px;
+    width: 17px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  input:checked + .slider:before {
+    -webkit-transform: translateX(17px);
+    -ms-transform: translateX(17px);
+    transform: translateX(17px);
+  }
+
+
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 20px;
+  }
+
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  input:checked + .slider {
+    background-color: $text-color;
+  }
+
+  input:focus + .slider {
+    box-shadow: 0 0 1px $info;
+  }
+  &-info{
+    input:checked + .slider {
+      background-color: $info;
+    }
+
+    input:focus + .slider {
+      box-shadow: 0 0 1px $info;
+    }
+  }
+  &-primary{
+    input:checked + .slider {
+      background-color: $primary;
+    }
+
+    input:focus + .slider {
+      box-shadow: 0 0 1px $primary;
+    }
+  }
+  &-warning{
+    input:checked + .slider {
+      background-color: $warning;
+    }
+
+    input:focus + .slider {
+      box-shadow: 0 0 1px $warning;
+    }
+  }
+  &-danger{
+    input:checked + .slider {
+      background-color: $danger;
+    }
+
+    input:focus + .slider {
+      box-shadow: 0 0 1px $danger;
+    }
+  }
+}
+
+
+.checkbox, .radio{
+  margin-top: 2px;
+  margin-bottom: 20px;
+  position: relative;
+
+  text-align: left;
+  padding-left: 25px;
+  display: block;
+  text-transform: none;
+  &+&{
+    margin-top: 2px;
+    margin-left: 80px;
+  }
+  input {
+    display:none;
+    margin-left: 0;
+  }
+
+  input + span:before{
+      content: "";
+      display:inline-block;
+      position: absolute;
+      border-radius: 4px;
+      left: 0;
+      top: 11px;
+      transform: translateY(-50%);
+      width: 18px;
+      height: 18px;
+      margin:-1px 4px 0 0;
+      border: 1px solid  #000;
+      background: #fff;
+      cursor:pointer;
+      text-align: center;
+
+
+  }
+  input:checked + span{
+      &:before{
+        content: "\f00c";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        -webkit-font-smoothing: antialiased;
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        line-height: 18px;
+        font-size: 10px;
+    }
+  }
+}
+.checkbox--solid{
+  span:before{
+    background: #E2E5EC !important;
+    border: none !important;
+    color:$info;
+  }
+
+}
+// Forms
+.control-label{
+  display: block;
+}
+.form-control, .form-input{
+  min-height: 37px;
+  font-size: 1.4rem;
+  border-radius: 5px;
+  min-width: 180px;
+  border: 1px solid  #EBEDF2;
+  padding: 5px 10px;
+  &:focus{
+    border-color: $black;
+    box-shadow: none;
+  }
+}
+
+.field_with_errors{
+  .control-label{
+    color:#dc3545;
+  }
+}
+.valid{
+  .control-label{
+    color:#28a745;
+  }
+}
+.warning{
+  .is-warning.form-control{
+    padding-right: calc(1.5em + .75rem);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23dc3545' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right calc(.375em + .1875rem) center;
+    background-size: calc(.75em + .375rem) calc(.75em + .375rem);
+    border-color: $warning;
+    &:focus{
+      box-shadow: 0 0 5px $warning
+    }
+  }
+  .control-label{
+    color:$warning;
+  }
+}
+.warning-feedback{
+  margin-top: 0.25rem;
+  font-size: 80%;
+}
+.is-warning + .warning-feedback{
+  color:$warning;
+}
+.errors-list{
+  padding-left: 0;
+  list-style-position: inside;
+  color:#dc3545;
+  margin-bottom: 15px;
+}
+// Buttons
+.btn{
+  padding: 10px 30px;
+  outline: none !important;
+  font-size: 1.4rem;
+  border-radius: 5px;
+  transition:all 300ms;
+  &:focus, &:hover, &:active, &:active:focus{
+    outline: none;
+  }
+
+}
+.btn-sm{
+  padding: 7px 15px;
+}
+.btn-lg{
+  padding: 18px 64px;
+  border-radius: 5px;
+}
+.btn-link{
+  display: inline-block;
+  
+}
+// .btn + .btn{
+//   margin-left: 25px;
+// }
+
+@mixin btn-type ($color,$opacity) {
+  &{
+    background: $color;
+    border-color: $color;
+    color:$white;
+  }
+  &:hover,
+  &:focus{
+    background:darken($color, $opacity);
+    border-color: darken($color, $opacity);
+    color:$white;
+    box-shadow: none;
+    outline: none;
+  }
+  &:not(:disabled):not(.disabled):active,
+  &.active.focus,
+  &.active:focus,
+  &.active:hover,
+  &:active.focus,
+  &:active:focus,
+  &:active:hover{
+    background:darken($color, $opacity);
+    border-color: darken($color, $opacity);
+    color:$white;
+    outline: none;
+    box-shadow: inset 0 0 10px rgba($black, 0.3) !important;
+  }
+  &.btn-inverse{
+    background: transparent;
+    color:$color;
+    border-color: transparent;
+    &:hover,
+    &:focus,
+    &:active,
+    &:not(:disabled):not(.disabled):active,
+    &.active.focus,
+    &.active:focus,
+    &.active:hover,
+    &:active.focus,
+    &:active:focus,
+    &:active:hover{
+      background: transparent;
+      color:darken($color, $opacity + 10%);
+      box-shadow: none !important;
+      outline: none !important;
+      border-color: transparent
+    }
+  }
+}
+.btn-action{
+  padding: 7px 12px !important;
+}
+.btn-info{
+  @include btn-type($info, 10%);
+}
+.btn-success{
+  @include btn-type($success, 10%);
+}
+.btn-danger{
+  @include btn-type($danger, 10%);
+}
+.btn-warning{
+  @include btn-type($warning, 10%);
+}
+.btn-purple{
+  @include btn-type($purple, 10%);
+}
+.btn-primary{
+  @include btn-type($primary, 10%);
+}
+
+.has-feedback{
+  position: relative;
+}
+.form-control-feedback{
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  display: block;
+  width: 37px;
+  height: 37px;
+  line-height: 37px;
+  text-align: center;
+  cursor: pointer;
+  
+}
+.search-form{
+  position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 2;
+    border-bottom: 1px solid  #DFE2EA;
+    margin-bottom: 0;
+  .form-control{
+    border-radius: 0;
+    border: none;
+    
+  }
+  .btn-search{
+    height: 37px;
+    width: 37px;
+    border: none;
+    line-height: 37px;
+    background: none;
+    outline: none !important;
+    transition: all 300ms;
+    &:hover, &:focus{
+      opacity: 0.5;
+    }
+  }
+}

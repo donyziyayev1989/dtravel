@@ -1,0 +1,53 @@
+.filter{
+	padding: 0 40px 10px;
+}
+.date{
+	.form-group{
+		margin-top: 0;
+		&>label{
+			font-size: 18px;
+			margin-right: 5px;
+		}
+		position: relative;
+		&:after{
+			position: absolute;
+			font-family: "Font Awesome 5 Free";
+	    	font-weight: 900;
+	    	content: "\f133";
+	    	-webkit-font-smoothing: antialiased;
+		    display: inline-block;
+		    font-style: normal;
+		    font-variant: normal;
+		    text-rendering: auto;
+		    line-height: 1;
+		    top: 12px;
+		    right: 12px;
+		}
+	}
+}
+.datepicker-input{
+	height: 40px;
+	padding: 10px;
+	border-radius: 5px;
+	border: 1px solid #EEEEEE;
+	min-width: 300px;
+	font-size: 1.6rem;
+	
+	&:focus{
+		border-color: #aaa
+	}
+}
+.ml-50{
+	margin-left: 50px;
+}
+.modal-detail{
+	.modal-dialog{
+		padding: 0;
+		min-width: 450px;
+		background: transparent;
+		max-height: 150vh;
+	}
+	.print-cheque{
+		padding-top: 0;
+	}
+}

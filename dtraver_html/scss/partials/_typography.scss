@@ -1,0 +1,37 @@
+/***********************************************************************************/
+/* 								Typography	 style 				*/
+/***********************************************************************************/
+html{
+	font-size: 10px;
+}
+body{
+	font-size: 14px;
+	font-weight: 400;
+	font-family: Roboto;
+	color:$text-color;
+}
+
+
+h1,.h1, h2,.h2, h3,.h3, h4,.h4, h5,.h5, h6, .h6 {
+
+}
+.font, .text{
+	&-primary{
+		color:$primary;
+	}
+	&-success{
+		color:$success;
+	}
+	&-warning{
+		color:$warning;
+	}
+	&-danger{
+		color:$danger;
+	}
+	&-brand{
+		color:$brand;
+	}
+	&-info{
+		color:$info;
+	}
+}

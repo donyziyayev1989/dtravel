@@ -1,0 +1,125 @@
+.widget{
+	background: $widget-bg;
+	padding-top: 10px;
+	font-size: 1.5rem;
+	border-radius: 5px;
+	& + &{
+		margin-top: 10px;
+	}
+	
+	.btn-search{
+		color:#808080;
+	}
+	.row{
+		margin-left: -10px;
+		margin-right: -10px;
+	}
+	.btn-block{
+		border-top: 1px solid  $black;
+		background: $widget-bg;
+		border-radius: 0 0 5px 5px;
+		color:$white;
+		i{
+			color:#4B4B57;
+			margin-right: 10px;
+		}
+		&:hover, &:focus{
+			text-shadow:0 0 1px white;
+			i{
+				color:$white;
+			}
+		}
+	}
+	.toggle{
+		background: #2C2C33;
+		border-radius: 0 0 5px 5px;
+		span{
+			text-align: center;
+			padding: 5px;
+		}
+	}
+	.data{
+		color:$white;
+		padding: 10px;
+		border-bottom: 1px solid  $black;
+		&:first-child{
+			border-top:  1px solid  $black;
+
+		}
+		&.disabled{
+			background: $black2
+		}
+	}
+}
+.widget__title{
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: 10px;
+}
+.users{
+	
+	margin-top: 20px;
+	overflow-y: auto;
+}
+.user{
+	color:$light-grey1;
+	background: $black2;
+	padding: 10px;
+	font-weight: 300;
+	font-size: 1.2rem;
+	& + &{
+		border-top: 1px solid  $black;
+	}
+	.table{
+		text-align: left;
+		tr{
+			td{
+				padding: 5px;
+				vertical-align: top;
+			}
+		}
+	}
+	.actions{
+		.btn + .btn{
+			margin-left: 25px;
+		}
+	}
+	@include maxextralg {
+		.actions{
+			.btn{
+				margin-bottom: 5px;
+			}
+			.btn + .btn{
+				margin-left: 10px;
+
+			}
+		}
+	}
+}
+.user--flex{
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+	color:$white;
+	padding: 4px 10px;
+	font-size: 15px;
+	.user__name{
+		padding-right: 15px;
+	}
+	.user__card{
+		padding-left: 15px;
+		padding-right: 20px;
+	}
+	.btn{
+		padding: 7px 17px;
+	}
+}
+.payment-type{
+	.btn{
+		&.selected{
+			border-color: $purple;
+			background: $purple;
+		}
+	}
+}

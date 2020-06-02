@@ -1,0 +1,834 @@
+!!!
+%html{:lang => "en"}
+  / begin::Head
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:charset => "utf-8"}/
+    %title Tables
+    %meta{:content => "Login page example", :name => "description"}/
+    %meta{:content => "width=device-width, initial-scale=1, shrink-to-fit=no", :name => "viewport"}/
+    / begin::Fonts
+    %link{:href => "https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700", :rel => "stylesheet"}/
+    / end::Fonts
+    / Bootstrap css
+    %link{:href => "css/bootstrap.min.css", :rel => "stylesheet"}/
+    / FontAwesome
+    %link{:href => "css/fontAwesome.css", :rel => "stylesheet"}/
+    / Select2
+    %link{:href => "css/select2.css", :rel => "stylesheet"}/
+    / Custom styles
+    %link{:href => "css/style.css", :rel => "stylesheet"}/
+    %link{:href => "images/favicon.ico", :rel => "shortcut icon"}/
+  / end::Head
+  %body
+    / Beginning .header
+    %header.header.header--fixed
+      .backdrop
+      .header__inner.container-fluid
+        %button.navbar-toggler{"aria-controls" => "main-nav", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#main-nav", :type => "button"}
+          %span.fas.fa-bars
+        %nav#main-nav.header__navbar
+          .navbar__inner.slim-scrollbar
+            %button.header__navbar__close
+              %i.fas.fa-times
+            %ul.navbar-nav
+              %li.nav-item.active
+                %a.nav-link{:href => "#"} Dashboard
+              %li.nav-item.dropdown
+                %a#dropdown04.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#"}
+                  Hover
+                  %i.angle.fas.fa-chevron-down
+                .dropdown-menu{"aria-labelledby" => "dropdown04"}
+                  %a.dropdown-item{:href => "#"}
+                    %i.far.fa-paper-plane
+                    Action
+                    %span.badge.badge-danger 2
+                  %a.dropdown-item{:href => "#"}
+                    %i.far.fa-paper-plane
+                    Another action
+                  %a.dropdown-item{:href => "#"}
+                    %i.far.fa-paper-plane
+                    Something else here
+                  %a.dropdown-item{:href => "#"}
+                    %i.far.fa-paper-plane
+                    Action
+                    %span.badge.badge-danger 25
+                  %a.dropdown-item{:href => "#"}
+                    %i.far.fa-paper-plane
+                    Another action
+                  %a.dropdown-item{:href => "#"}
+                    %i.far.fa-paper-plane
+                    Something else here
+              %li.nav-item
+                %a.nav-link{:href => "#"} Products
+              %li.nav-item
+                %a.nav-link{:href => "#"} Reports
+              %li.nav-item.dropdown.mega-dropdown
+                %a#dropdown04.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "http:#"}
+                  Hover
+                  %i.angle.fas.fa-chevron-down
+                .dropdown-menu.mega-dropdown-menu{"aria-labelledby" => "dropdown04"}
+                  .container
+                    .row
+                      .col
+                        %h4.dropdown-header Actions
+                        %a.dropdown-item{:href => "#"}
+                          %i.far.fa-paper-plane
+                          Action
+                        %a.dropdown-item{:href => "#"}
+                          %i.far.fa-paper-plane
+                          Another action
+                        %a.dropdown-item{:href => "#"}
+                          %i.far.fa-paper-plane
+                          Something else here
+                      .col
+                        %h4.dropdown-header Actions
+                        %ul.list.list-dashed
+                          %li
+                            %a.dropdown-item{:href => "#"} Action
+                          %li
+                            %a.dropdown-item{:href => "#"} Another action
+                          %li
+                            %a.dropdown-item{:href => "#"} Something else here
+                      .col
+                        %h4.dropdown-header Actions
+                        %ul.list.list-dot
+                          %li
+                            %a.dropdown-item{:href => "#"} Action
+                          %li
+                            %a.dropdown-item{:href => "#"} Another action
+                          %li
+                            %a.dropdown-item{:href => "#"} Something else here
+              %li.nav-item.dropdown
+                %a#dropdown04.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "http:#"}
+                  Roles
+                  %i.angle.fas.fa-chevron-down
+                .dropdown-menu{"aria-labelledby" => "dropdown04"}
+                  %a.dropdown-item{:href => "#"}
+                    %i.far.fa-paper-plane
+                    Action
+                    %span.badge.badge-danger 2
+                  %a.dropdown-item{:href => "#"}
+                    %i.far.fa-paper-plane
+                    Another action
+                  %a.dropdown-item{:href => "#"}
+                    %i.far.fa-paper-plane
+                    Something else here
+                  %a.dropdown-item{:href => "#"}
+                    %i.far.fa-paper-plane
+                    Action
+                    %span.badge.badge-danger 25
+                  %a.dropdown-item{:href => "#"}
+                    %i.far.fa-paper-plane
+                    Another action
+                  %a.dropdown-item{:href => "#"}
+                    %i.far.fa-paper-plane
+                    Something else here
+        %nav.header__toolbar
+          %ul.navbar-nav.mr-auto
+            %li.nav-item.header__topbar-item.dropdown
+              .header__topbar-wrapper{"aria-expanded" => "false", "data-offset" => "10px,0px", "data-toggle" => "dropdown"}
+                %span.header__topbar-icon
+                  %i.far.fa-bell
+                %span.badge.badge--danger 2
+              .dropdown-menu.dropdown-menu-right.dropdown-menu-anim.dropdown-menu-xl
+                %form
+                  / begin: Head
+                  .dropdown-head.dropdown-head--dark
+                    %h3.dropdown-head__title
+                      9 New
+                      %span User Notifications
+                  / end: Head
+                  %ul.nav.nav-tabs.nav-tabs-line.nav-tabs-line-success{:role => "tablist"}
+                    %li.nav-item
+                      %a.nav-link.show.active{"aria-selected" => "true", "data-toggle" => "tab", :href => "#topbar_notifications_notifications", :role => "tab"} Alerts
+                    %li.nav-item
+                      %a.nav-link{"aria-selected" => "false", "data-toggle" => "tab", :href => "#topbar_notifications_events", :role => "tab"} Events
+                    %li.nav-item
+                      %a.nav-link{"aria-selected" => "false", "data-toggle" => "tab", :href => "#topbar_notifications_logs", :role => "tab"} Logs
+                  .tab-content
+                    #topbar_notifications_notifications.tab-pane.show.active{:role => "tabpanel"}
+                      .notification.slim-scrollbar
+                        %a.notification__item{:href => "#"}
+                          .notification__item-icon
+                            %i.fas.fa-bullhorn.icon--info
+                          .notification__item-details
+                            .notification__item-title
+                              New order has been placed
+                            .notification__item-content
+                              Lorem ipsum dolor sit amet.
+                        %a.notification__item.notification__item--read{:href => "#"}
+                          .notification__item-icon
+                            %i.fas.fa-bullhorn.icon--warning
+                          .notification__item-details
+                            .notification__item-title
+                              Company meeting canceled
+                            .notification__item-content
+                              Lorem ipsum dolor sit amet.
+                        %a.notification__item{:href => "#"}
+                          .notification__item-icon
+                            %i.fas.fa-bullhorn.icon--danger
+                          .notification__item-details
+                            .notification__item-title
+                              New report has been received
+                            .notification__item-time
+                              23 hrs ago
+                        %a.notification__item{:href => "#"}
+                          .notification__item-icon
+                            %i.fas.fa-bullhorn.icon--primary
+                          .notification__item-details
+                            .notification__item-title
+                              Finance report has been generated
+                            .notification__item-content
+                              Lorem ipsum dolor sit amet.
+                        %a.notification__item{:href => "#"}
+                          .notification__item-icon
+                            %i.fas.fa-bullhorn.icon--success
+                          .notification__item-details
+                            .notification__item-title
+                              New customer comment recieved
+                            .notification__item-content
+                              Lorem ipsum dolor sit amet.
+                        %a.notification__item{:href => "#"}
+                          .notification__item-icon
+                            %i.fas.fa-bullhorn.icon--info
+                          .notification__item-details
+                            .notification__item-title
+                              New order has been received
+                            .notification__item-content
+                              Lorem ipsum dolor sit amet.
+                        %a.notification__item{:href => "#"}
+                          .notification__item-icon
+                            %i.fas.fa-bullhorn.icon--info
+                          .notification__item-details
+                            .notification__item-title
+                              New customer is registered
+                            .notification__item-content
+                              Lorem ipsum dolor sit amet.
+                        %a.notification__item{:href => "#"}
+                          .notification__item-icon
+                            %i.fas.fa-bullhorn.icon--info
+                          .notification__item-details
+                            .notification__item-title
+                              Application has been approved
+                            .notification__item-content
+                              Lorem ipsum dolor sit amet.
+                        %a.notification__item{:href => "#"}
+                          .notification__item-icon
+                            %i.fas.fa-bullhorn.icon--info
+                          .notification__item-details
+                            .notification__item-title
+                              New file has been uploaded
+                            .notification__item-content
+                              Lorem ipsum dolor sit amet.
+                        %a.notification__item{:href => "#"}
+                          .notification__item-icon
+                            %i.fas.fa-bullhorn.icon--info
+                          .notification__item-details
+                            .notification__item-title
+                              New user feedback received
+                            .notification__item-content
+                              Lorem ipsum dolor sit amet.
+                        %a.notification__item{:href => "#"}
+                          .notification__item-icon
+                            %i.fas.fa-bullhorn.icon--info
+                          .notification__item-details
+                            .notification__item-title
+                              System reboot has been successfully completed
+                            .notification__item-content
+                              Lorem ipsum dolor sit amet.
+                        %a.notification__item{:href => "#"}
+                          .notification__item-icon
+                            %i.fas.fa-bullhorn.icon--info
+                          .notification__item-details
+                            .notification__item-title
+                              New customer is registered
+                            .notification__item-content
+                              Lorem ipsum dolor sit amet.
+                    #topbar_notifications_events.tab-pane{:role => "tabpanel"}
+                      .notification.slim-scrollbar
+                        %a.notification__item{:href => "#"}
+                          .notification__item-icon
+                            %i.fas.fa-angle-double-right.icon--info
+                          .notification__item-details
+                            .notification__item-title
+                              New order has been placed
+                            .notification__item-content
+                              Lorem ipsum dolor sit amet.
+                        %a.notification__item.notification__item--read{:href => "#"}
+                          .notification__item-icon
+                            %i.fas.fa-angle-double-right.icon--warning
+                          .notification__item-details
+                            .notification__item-title
+                              Company meeting canceled
+                            .notification__item-content
+                              Lorem ipsum dolor sit amet.
+                        %a.notification__item{:href => "#"}
+                          .notification__item-icon
+                            %i.fas.fa-angle-double-right.icon--danger
+                          .notification__item-details
+                            .notification__item-title
+                              New report has been received
+                            .notification__item-time
+                              23 hrs ago
+                        %a.notification__item{:href => "#"}
+                          .notification__item-icon
+                            %i.fas.fa-angle-double-right.icon--primary
+                          .notification__item-details
+                            .notification__item-title
+                              Finance report has been generated
+                            .notification__item-content
+                              Lorem ipsum dolor sit amet.
+                        %a.notification__item{:href => "#"}
+                          .notification__item-icon
+                            %i.fas.fa-angle-double-right.icon--success
+                          .notification__item-details
+                            .notification__item-title
+                              New customer comment recieved
+                            .notification__item-content
+                              Lorem ipsum dolor sit amet.
+                    #topbar_notifications_logs.tab-pane{:role => "tabpanel"}
+                      .grid.grid--ver{:style => "min-height: 200px;"}
+                        .grid.grid--hor.grid__item--fluid
+                          .grid__item
+                            All caught up!
+                            = succeed "No" do
+                              %br/
+            %li.nav-item.header__topbar-item.dropdown
+              .header__topbar-wrapper{"aria-expanded" => "false", "data-toggle" => "dropdown"}
+                Иван Иванов
+                %i.angle.fas.fa-chevron-down
+              %span.header__topbar-icon.icon-bg--info.ml-3
+                %i.far.fa-user
+              .dropdown-menu.dropdown-menu-right.dropdown-menu-anim.dropdown-menu-sm
+                / begin: Head
+                .dropdown-head.dropdown-head--dark
+                  %h3.dropdown-head__title
+                    .user Иван Иванов
+                    %span ivanov@travel.com
+                / end: Head
+                .user-links
+                  %a.dropdown-item{:href => "#"}
+                    %i.fas.fa-angle-double-right
+                    Account
+                  %a.dropdown-item{:href => "#"}
+                    %i.fas.fa-angle-double-right
+                    Manage order
+                  %a.dropdown-item{:href => "#"}
+                    %i.fas.fa-angle-double-right
+                    Log Out
+    / End .header
+    %main.main-content
+      .container-fluid
+        %nav{"aria-label" => "breadcrumb"}
+          %ol.breadcrumb
+            %li.breadcrumb__item
+              %a{:href => ""}
+                %i.fas.fa-home
+            %li.breadcrumb__item
+              %a{:href => "#"} Catalog
+            %li.breadcrumb__item -
+            %li.breadcrumb__item.active{"aria-current" => "page"} Products
+        .portlet
+          .portlet__head
+            .portlet__head-label
+              %h3.portlet__head-title
+                Partners
+            .portlet__head-toolbar
+              .portlet__head-wrapper
+                .portlet__head-actions
+                  %a.btn.btn-sm.btn-info{"data-toggle" => "modal", :href => "#modal_add"}
+                    Add New
+                  %a.btn.btn-sm.btn-purple{:href => "#"}
+                    Excel
+                  %a.btn.btn-sm.btn-danger{:href => "#"}
+                    Delete
+          .portlet__body
+            %form.mb-20
+              .row.align-bottom
+                .col-md-3.col-sm-6.col-xs-12.form-group
+                  %label{:for => ""} Search:
+                  %input.form-control{:placeholder => "First name", :type => "search"}/
+                .col-md-3.col-sm-6.col-xs-12.form-group
+                  %label{:for => ""} Select2
+                  %select.select2.select2-multiple.form-control{:multiple => "multiple"}
+                    %optgroup{:label => "Alaskan/Hawaiian Time Zone"}
+                      %option{:value => "AK"} Alaska
+                      %option{:value => "HI"} Hawaii
+                    %optgroup{:label => "Pacific Time Zone"}
+                      %option{:value => "CA"} California
+                      %option{:value => "NV"} Nevada
+                      %option{:value => "OR"} Oregon
+                      %option{:value => "WA"} Washington
+                    %optgroup{:label => "Mountain Time Zone"}
+                      %option{:value => "AZ"} Arizona
+                      %option{:value => "CO"} Colorado
+                      %option{:value => "ID"} Idaho
+                      %option{:value => "MT"} Montana
+                      %option{:value => "NE"} Nebraska
+                      %option{:value => "NM"} New Mexico
+                      %option{:value => "ND"} North Dakota
+                      %option{:value => "UT"} Utah
+                      %option{:value => "WY"} Wyoming
+                    %optgroup{:label => "Central Time Zone"}
+                      %option{:value => "AL"} Alabama
+                      %option{:value => "AR"} Arkansas
+                      %option{:value => "IL"} Illinois
+                      %option{:value => "IA"} Iowa
+                      %option{:value => "KS"} Kansas
+                      %option{:value => "KY"} Kentucky
+                      %option{:value => "LA"} Louisiana
+                      %option{:value => "MN"} Minnesota
+                      %option{:value => "MS"} Mississippi
+                      %option{:value => "MO"} Missouri
+                      %option{:value => "OK"} Oklahoma
+                      %option{:value => "SD"} South Dakota
+                      %option{:value => "TX"} Texas
+                      %option{:value => "TN"} Tennessee
+                      %option{:value => "WI"} Wisconsin
+                    %optgroup{:label => "Eastern Time Zone"}
+                      %option{:value => "CT"} Connecticut
+                      %option{:value => "DE"} Delaware
+                      %option{:value => "FL"} Florida
+                      %option{:value => "GA"} Georgia
+                      %option{:value => "IN"} Indiana
+                      %option{:value => "ME"} Maine
+                      %option{:value => "MD"} Maryland
+                      %option{:value => "MA"} Massachusetts
+                      %option{:value => "MI"} Michigan
+                      %option{:value => "NH"} New Hampshire
+                      %option{:value => "NJ"} New Jersey
+                      %option{:value => "NY"} New York
+                      %option{:value => "NC"} North Carolina
+                      %option{:value => "OH"} Ohio
+                      %option{:value => "PA"} Pennsylvania
+                      %option{:value => "RI"} Rhode Island
+                      %option{:value => "SC"} South Carolina
+                      %option{:value => "VT"} Vermont
+                      %option{:value => "VA"} Virginia
+                      %option{:value => "WV"} West Virginia
+                .col-md-3.col-sm-6.col-xs-12.form-group
+                  %label{:for => ""} Select2
+                  %select.select2.select2-multiple.form-control{:multiple => "multiple"}
+                    %optgroup{:label => "Alaskan/Hawaiian Time Zone"}
+                      %option{:value => "AK"} Alaska
+                      %option{:value => "HI"} Hawaii
+                    %optgroup{:label => "Pacific Time Zone"}
+                      %option{:value => "CA"} California
+                      %option{:value => "NV"} Nevada
+                      %option{:value => "OR"} Oregon
+                      %option{:value => "WA"} Washington
+                    %optgroup{:label => "Mountain Time Zone"}
+                      %option{:value => "AZ"} Arizona
+                      %option{:value => "CO"} Colorado
+                      %option{:value => "ID"} Idaho
+                      %option{:value => "MT"} Montana
+                      %option{:value => "NE"} Nebraska
+                      %option{:value => "NM"} New Mexico
+                      %option{:value => "ND"} North Dakota
+                      %option{:value => "UT"} Utah
+                      %option{:value => "WY"} Wyoming
+                    %optgroup{:label => "Central Time Zone"}
+                      %option{:value => "AL"} Alabama
+                      %option{:value => "AR"} Arkansas
+                      %option{:value => "IL"} Illinois
+                      %option{:value => "IA"} Iowa
+                      %option{:value => "KS"} Kansas
+                      %option{:value => "KY"} Kentucky
+                      %option{:value => "LA"} Louisiana
+                      %option{:value => "MN"} Minnesota
+                      %option{:value => "MS"} Mississippi
+                      %option{:value => "MO"} Missouri
+                      %option{:value => "OK"} Oklahoma
+                      %option{:value => "SD"} South Dakota
+                      %option{:value => "TX"} Texas
+                      %option{:value => "TN"} Tennessee
+                      %option{:value => "WI"} Wisconsin
+                    %optgroup{:label => "Eastern Time Zone"}
+                      %option{:value => "CT"} Connecticut
+                      %option{:value => "DE"} Delaware
+                      %option{:value => "FL"} Florida
+                      %option{:value => "GA"} Georgia
+                      %option{:value => "IN"} Indiana
+                      %option{:value => "ME"} Maine
+                      %option{:value => "MD"} Maryland
+                      %option{:value => "MA"} Massachusetts
+                      %option{:value => "MI"} Michigan
+                      %option{:value => "NH"} New Hampshire
+                      %option{:value => "NJ"} New Jersey
+                      %option{:value => "NY"} New York
+                      %option{:value => "NC"} North Carolina
+                      %option{:value => "OH"} Ohio
+                      %option{:value => "PA"} Pennsylvania
+                      %option{:value => "RI"} Rhode Island
+                      %option{:value => "SC"} South Carolina
+                      %option{:value => "VT"} Vermont
+                      %option{:value => "VA"} Virginia
+                      %option{:value => "WV"} West Virginia
+                .col-md-3.col-sm-6.col-xs-12.form-group
+                  %button.btn.btn-sm.btn-info{:type => "button"}
+                    Search
+                  %button.btn.btn-sm.btn-danger{:type => "reset"}
+                    Clear
+            .table-responsive
+              %table.table.table--striped.table--selectable-row
+                %thead
+                  %tr
+                    %th
+                      %label.checkbox
+                        %input{:name => "checkAll", :type => "checkbox"}/
+                        %span
+                      №
+                    %th Title
+                    %th Date
+                    %th Status
+                    %th Actions
+                    %th
+                %tbody
+                  %tr
+                    %td
+                      %label.checkbox
+                        %input{:name => "id", :type => "checkbox"}/
+                        %span
+                      1
+                    %td Классический тур
+                    %td 11/10/2018
+                    %td
+                      %span.label.label--danger danger
+                    %td
+                      %button.btn.btn-success.btn-inverse.btn-sm.btn-action{"data-placement" => "top", "data-toggle" => "tooltip", :title => "Edit", :type => "button"}
+                        %i.fas.fa-edit
+                      %button.btn.btn-danger.btn-inverse.btn-sm.btn-action{"data-placement" => "top", "data-toggle" => "tooltip", :title => "Delete", :type => "button"}
+                        %i.fas.fa-trash-alt
+                      %button.btn.btn-success.btn-sm{:type => "button"} Details
+                    %td
+                      %label.switch.switch-primary
+                        %input{:type => "checkbox"}/
+                        %span.slider.round
+                  %tr
+                    %td
+                      %label.checkbox
+                        %input{:name => "id", :type => "checkbox"}/
+                        %span
+                      2
+                    %td Классический тур
+                    %td 11/10/2018
+                    %td
+                      %span.label.label--success success
+                    %td
+                      %button.btn.btn-success.btn-inverse.btn-sm.btn-action{"data-placement" => "top", "data-toggle" => "tooltip", :title => "Edit", :type => "button"}
+                        %i.fas.fa-edit
+                      %button.btn.btn-danger.btn-inverse.btn-sm.btn-action{"data-placement" => "top", "data-toggle" => "tooltip", :title => "Delete", :type => "button"}
+                        %i.fas.fa-trash-alt
+                      %button.btn.btn-success.btn-sm{:type => "button"} Details
+                    %td
+                      %label.switch.switch-warning
+                        %input{:type => "checkbox"}/
+                        %span.slider
+                  %tr.selected-row
+                    %td
+                      %label.checkbox
+                        %input{:checked => "checked", :name => "id", :type => "checkbox"}/
+                        %span
+                      3
+                    %td Классический тур
+                    %td 11/10/2018
+                    %td
+                      %span.label.label--warning warning
+                    %td
+                      %button.btn.btn-success.btn-inverse.btn-sm.btn-action{"data-placement" => "top", "data-toggle" => "tooltip", :title => "Edit", :type => "button"}
+                        %i.fas.fa-edit
+                      %button.btn.btn-danger.btn-inverse.btn-sm.btn-action{"data-placement" => "top", "data-toggle" => "tooltip", :title => "Delete", :type => "button"}
+                        %i.fas.fa-trash-alt
+                      %button.btn.btn-success.btn-sm{:type => "button"} Details
+                    %td
+                      %label.switch.switch-success
+                        %input{:type => "checkbox"}/
+                        %span.slider.round
+                  %tr
+                    %td
+                      %label.checkbox
+                        %input{:name => "id", :type => "checkbox"}/
+                        %span
+                      4
+                    %td Классический тур
+                    %td 11/10/2018
+                    %td
+                      %span.label.label--info info
+                    %td
+                      %button.btn.btn-success.btn-inverse.btn-sm.btn-action{"data-placement" => "top", "data-toggle" => "tooltip", :title => "Edit", :type => "button"}
+                        %i.fas.fa-edit
+                      %button.btn.btn-danger.btn-inverse.btn-sm.btn-action{"data-placement" => "top", "data-toggle" => "tooltip", :title => "Delete", :type => "button"}
+                        %i.fas.fa-trash-alt
+                      %button.btn.btn-success.btn-sm{:type => "button"} Details
+                    %td
+                      %label.switch.switch-info
+                        %input{:type => "checkbox"}/
+                        %span.slider.round
+                  %tr
+                    %td
+                      %label.checkbox
+                        %input{:name => "id", :type => "checkbox"}/
+                        %span
+                      5
+                    %td Классический тур
+                    %td 11/10/2018
+                    %td
+                      %span.label.label--primary primary
+                    %td
+                      %button.btn.btn-success.btn-inverse.btn-sm.btn-action{"data-placement" => "top", "data-toggle" => "tooltip", :title => "Edit", :type => "button"}
+                        %i.fas.fa-edit
+                      %button.btn.btn-danger.btn-inverse.btn-sm.btn-action{"data-placement" => "top", "data-toggle" => "tooltip", :title => "Delete", :type => "button"}
+                        %i.fas.fa-trash-alt
+                      %button.btn.btn-success.btn-sm{:type => "button"} Details
+                    %td
+                      %label.switch.switch-danger
+                        %input{:type => "checkbox"}/
+                        %span.slider.round
+                  %tr
+                    %td
+                      %label.checkbox
+                        %input{:name => "id", :type => "checkbox"}/
+                        %span
+                      6
+                    %td Классический тур
+                    %td 11/10/2018
+                    %td
+                      %span.label.label--success.disabled disabled
+                    %td
+                      %button.btn.btn-success.btn-inverse.btn-sm.btn-action{"data-placement" => "top", "data-toggle" => "tooltip", :title => "Edit", :type => "button"}
+                        %i.fas.fa-edit
+                      %button.btn.btn-danger.btn-inverse.btn-sm.btn-action{"data-placement" => "top", "data-toggle" => "tooltip", :title => "Delete", :type => "button"}
+                        %i.fas.fa-trash-alt
+                      %button.btn.btn-success.btn-sm{:type => "button"} Details
+                    %td
+                      %label.switch.switch-info
+                        %input{:type => "checkbox"}/
+                        %span.slider.round
+                  %tr
+                    %td
+                      %label.checkbox
+                        %input{:name => "id", :type => "checkbox"}/
+                        %span
+                      7
+                    %td Классический тур
+                    %td 11/10/2018
+                    %td
+                      %span.label.label--success success
+                    %td
+                      %button.btn.btn-success.btn-inverse.btn-sm.btn-action{"data-placement" => "top", "data-toggle" => "tooltip", :title => "Edit", :type => "button"}
+                        %i.fas.fa-edit
+                      %button.btn.btn-danger.btn-inverse.btn-sm.btn-action{"data-placement" => "top", "data-toggle" => "tooltip", :title => "Delete", :type => "button"}
+                        %i.fas.fa-trash-alt
+                      %button.btn.btn-success.btn-sm{:type => "button"} Details
+                    %td
+                      %label.switch.switch-info
+                        %input{:type => "checkbox"}/
+                        %span.slider.round
+                  %tr
+                    %td
+                      %label.checkbox
+                        %input{:name => "id", :type => "checkbox"}/
+                        %span
+                      8
+                    %td Классический тур
+                    %td 11/10/2018
+                    %td
+                      %span.label.label--success success
+                    %td
+                      %button.btn.btn-success.btn-inverse.btn-sm.btn-action{"data-placement" => "top", "data-toggle" => "tooltip", :title => "Edit", :type => "button"}
+                        %i.fas.fa-edit
+                      %button.btn.btn-danger.btn-inverse.btn-sm.btn-action{"data-placement" => "top", "data-toggle" => "tooltip", :title => "Delete", :type => "button"}
+                        %i.fas.fa-trash-alt
+                      %button.btn.btn-success.btn-sm{:type => "button"} Details
+                    %td
+                      %label.switch.switch-info
+                        %input{:type => "checkbox"}/
+                        %span.slider.round
+                  %tr
+                    %td
+                      %label.checkbox
+                        %input{:name => "id", :type => "checkbox"}/
+                        %span
+                      9
+                    %td Классический тур
+                    %td 11/10/2018
+                    %td
+                      %span.label.label--success success
+                    %td
+                      %button.btn.btn-success.btn-inverse.btn-sm.btn-action{"data-placement" => "top", "data-toggle" => "tooltip", :title => "Edit", :type => "button"}
+                        %i.fas.fa-edit
+                      %button.btn.btn-danger.btn-inverse.btn-sm.btn-action{"data-placement" => "top", "data-toggle" => "tooltip", :title => "Delete", :type => "button"}
+                        %i.fas.fa-trash-alt
+                      %button.btn.btn-success.btn-sm{:type => "button"} Details
+                    %td
+                      %label.switch.switch-info
+                        %input{:type => "checkbox"}/
+                        %span.slider.round
+                  %tr
+                    %td
+                      %label.checkbox
+                        %input{:name => "id", :type => "checkbox"}/
+                        %span
+                      10
+                    %td Классический тур
+                    %td 11/10/2018
+                    %td
+                      %span.label.label--success success
+                    %td
+                      %button.btn.btn-success.btn-inverse.btn-sm.btn-action{"data-placement" => "top", "data-toggle" => "tooltip", :title => "Edit", :type => "button"}
+                        %i.fas.fa-edit
+                      %button.btn.btn-danger.btn-inverse.btn-sm.btn-action{"data-placement" => "top", "data-toggle" => "tooltip", :title => "Delete", :type => "button"}
+                        %i.fas.fa-trash-alt
+                      %button.btn.btn-success.btn-sm{:type => "button"} Details
+                    %td
+                      %label.switch.switch-info
+                        %input{:type => "checkbox"}/
+                        %span.slider.round
+            .row.mt-30
+              .col-sm-12.col-md-6
+                %nav{"aria-label" => "Page navigation example"}
+                  %ul.pagination
+                    %li.page-item
+                      %span.page-link{"aria-label" => "First"}
+                        %span
+                          %i.fas.fa-angle-double-left
+                    %li.page-item
+                      %span.page-link{"aria-label" => "Previous"}
+                        %span
+                          %i.fas.fa-angle-left
+                    %li.page-item.active
+                      %a.page-link{:href => "#"} 1
+                    %li.page-item
+                      %a.page-link{:href => "#"} 2
+                    %li.page-item
+                      %a.page-link{:href => "#"} 3
+                    %li.page-item
+                      %a.page-link{:href => "#"} 4
+                    %li.page-item
+                      %a.page-link{:href => "#"} 5
+                    %li.page-item
+                      %span.page-link{"aria-label" => "Next"}
+                        %span
+                          %i.fas.fa-angle-right
+                    %li.page-item
+                      %span.page-link{"aria-label" => "Last"}
+                        %span
+                          %i.fas.fa-angle-double-right
+              .col-sm-12.col-md-6.text-right
+                %select.display-items{:id => "", :name => ""}
+                  %option{:value => "10"} 10
+                  %option{:value => "20"} 20
+                  %option{:value => "30"} 30
+                  %option{:value => "40"} 40
+                %span Displaying 1 - 10 of 100 records
+    %footer.footer
+      .container-fluid
+        .row
+          .col-md-4.footer__left
+            %p
+              2020 © Travel System By
+              = succeed "." do
+                %a{:href => "#"} DTravel
+          .col-md-8.footer__right
+            %ul.footer__list
+              %li
+                %a{:href => "#"} Privacy
+              %li
+                %a{:href => "#"} About
+              %li
+                %a{:href => "#"} Terms &amp; Conditions
+              %li
+                %a{:href => "#"} Support
+              %li
+                %a{:href => "#"} Purchase License
+              %li
+                %a{:href => "#"}
+                  %i.far.fa-question-circle
+    #scrollToTop.scrollToTop
+      %i.fas.fa-arrow-up
+    #modal_add.modal.fade
+      .modal-dialog{:role => "document"}
+        .modal-content
+          .modal-header
+            %h4.modal-title Add new product
+            %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+              %span{"aria-hidden" => "true"} ×
+              %span.sr-only Close
+          .modal-body
+            #layout_modal_errors
+              %ul.errors-list
+                %li Name can't be blank
+                %li Title can't be blank
+                %li Message can't be blank
+            %form
+              .form-group.invalid
+                .field_with_errors
+                  %label.control-label{:for => ""} Title *
+                .field_with_errors
+                  %input.form-control.is-invalid{:type => "text"}/
+                  .invalid-feedback Title can’t be blank.
+              .form-group
+                %label.control-label{:for => ""} Title without message
+                %input.form-control{:type => "text"}/
+              .form-group.invalid
+                .field_with_errors
+                  %label.control-label{:for => ""} Select2 Multiple with error
+                .field_with_errors
+                  %select.select2.select2-multiple.form-control.is-invalid{:multiple => "multiple"}
+                    %optgroup{:label => "Alaskan/Hawaiian Time Zone"}
+                      %option{:value => "AK"} Alaska
+                      %option{:value => "HI"} Hawaii
+                    %optgroup{:label => "Pacific Time Zone"}
+                      %option{:value => "CA"} California
+                      %option{:value => "NV"} Nevada
+                      %option{:value => "OR"} Oregon
+                      %option{:value => "WA"} Washington
+                    %optgroup{:label => "Mountain Time Zone"}
+                      %option{:value => "AZ"} Arizona
+                      %option{:value => "CO"} Colorado
+                      %option{:value => "ID"} Idaho
+                      %option{:value => "MT"} Montana
+                      %option{:value => "NE"} Nebraska
+                      %option{:value => "NM"} New Mexico
+                      %option{:value => "ND"} North Dakota
+                      %option{:value => "UT"} Utah
+                      %option{:value => "WY"} Wyoming
+                  .invalid-feedback Select can’t be blank.
+              .form-group.valid
+                %label.control-label{:for => ""} Select2 Single with succes
+                %select.select2.select2-single.form-control.is-valid
+                  %optgroup{:label => "Alaskan/Hawaiian Time Zone"}
+                    %option{:value => "AK"} Alaska
+                    %option{:value => "HI"} Hawaii
+                  %optgroup{:label => "Pacific Time Zone"}
+                    %option{:value => "CA"} California
+                    %option{:value => "NV"} Nevada
+                    %option{:value => "OR"} Oregon
+                    %option{:value => "WA"} Washington
+                  %optgroup{:label => "Mountain Time Zone"}
+                    %option{:value => "AZ"} Arizona
+                    %option{:value => "CO"} Colorado
+                    %option{:value => "ID"} Idaho
+                    %option{:value => "MT"} Montana
+                    %option{:value => "NE"} Nebraska
+                    %option{:value => "NM"} New Mexico
+                    %option{:value => "ND"} North Dakota
+                    %option{:value => "UT"} Utah
+                    %option{:value => "WY"} Wyoming
+                .valid-feedback Select can’t be blank.
+              .form-group.valid
+                %label.control-label{:for => ""} Description
+                %textarea.form-control.is-valid{:cols => "30", :id => "", :name => "", :rows => "5"}
+                .valid-feedback Looks good!
+          .modal-footer
+            %button.btn.btn-secondary{"data-dismiss" => "modal", :type => "button"} Close
+            %button.btn.btn-primary{:type => "button"} Save changes
+        / /.modal-content
+      / /.modal-dialog
+    / /.modal
+    %script{:src => "https://code.jquery.com/jquery-3.1.1.min.js"}
+    %script{:crossorigin => "anonymous", :integrity => "sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo", :src => "https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"}
+    %script{:src => "js/bootstrap.min.js"}
+    %script{:src => "js/select2.min.js"}
+    %script{:src => "js/script.js"}

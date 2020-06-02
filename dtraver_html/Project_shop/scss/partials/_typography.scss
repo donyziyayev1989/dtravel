@@ -1,0 +1,76 @@
+/***********************************************************************************/
+/* 								Typography	 style 				*/
+/***********************************************************************************/
+html{
+	font-size: 10px;
+}
+body{
+	font-size: 14px;
+	font-weight: 400;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+
+h1,.h1, h2,.h2, h3,.h3, h4,.h4, h5,.h5, h6, .h6 {
+	font-weight: 300;
+}
+h1, .h1{
+	font-size: 30px;
+}
+h2, .h2{
+	font-size: 26px;
+}
+h3, .h3{
+	font-size: 22px;
+}
+h4, .h4{
+	font-size: 18px;
+}
+h5, .h5{
+	font-size: 15px;
+}
+.font{
+	&-warning{
+		color:$warning;
+	}
+	&-info{
+		color:$info;
+	}
+	&-primary{
+		color:$primary;
+	}
+	&-success{
+		color:$success;
+	}
+	&-danger{
+		color:$danger;
+	}
+	&-md{
+		font-size: 1.6rem;
+	}
+	&-lg{
+		font-size: 2rem;
+	}
+}
+.font-italic{
+	font-style: italic;
+	
+}
+.font-2x{
+	font-size: 2em;
+}
+.font-sm{
+	font-size: 1.2rem;
+}
+.text-uppercase{
+	text-transform: uppercase;
+	
+}
+strong, b, .font-bold{
+	font-weight: bold !important;
+}
+a{
+	color:$info;
+	text-decoration: none;
+	
+}

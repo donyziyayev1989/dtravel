@@ -1,0 +1,54 @@
+// Tickets - ticket-form.html
+
+body.tickets{
+	.header{
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	.header__inner{
+		align-items: center;
+	}
+	.tel{
+		font-size: 2rem;
+		font-weight: bold;
+		display: block;
+		i{
+			margin-right: 10px;
+		}
+	}
+	.email{
+		margin-left: 35px;
+	}
+	.main-content{
+		margin-top: 100px;
+	}
+}
+.header__logo{
+	max-width: 80px;
+}
+.ticket-form-wrap{
+	padding-top: 30px;
+}
+.ticket-form{
+	padding: 22px 75px 40px;
+	legend{
+		color: #7A8091;
+		font-size: 1.6rem;
+		text-align: center;
+		margin-bottom: 30px;
+		font-weight: bold;
+		
+	}
+	.form-group{
+		margin-bottom: 20px;
+	}
+	.control-label{
+		margin-top: 8px;
+	}
+	@include maxmd {
+		padding: 22px 30px 30px;
+	}
+}
+.ticket-form__info{
+	font-size: 1.6rem;
+}
